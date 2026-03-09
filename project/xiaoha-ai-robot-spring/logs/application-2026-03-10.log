@@ -1,0 +1,459 @@
+2026-03-10 00:30:36.226 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-03-10 00:30:36.259 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - Starting FloraAiEcommerceSpringApplication using Java 21.0.6 with PID 11116 (D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring\target\classes started by czj13 in D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring)
+2026-03-10 00:30:36.262 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - The following 1 profile is active: "dev"
+2026-03-10 00:30:37.799 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-10 00:30:37.811 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-10 00:30:37.813 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-10 00:30:37.815 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-10 00:30:37.863 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-10 00:30:37.863 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1565 ms
+2026-03-10 00:30:37.944 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig - DuckDB 内存数据库数据源初始化完成
+2026-03-10 00:30:38.120 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-10 00:30:38.315 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (getNetworkTimeout)
+2026-03-10 00:30:38.322 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.duckdb.DuckDBConnection@393ae7a0
+2026-03-10 00:30:38.322 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-10 00:30:38.325 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig - DuckDB 共享连接创建成功
+2026-03-10 00:30:38.880 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Using the vector table name: t_vector_store. Is empty: false
+2026-03-10 00:30:38.885 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: t_vector_store in schema: public
+2026-03-10 00:30:38.885 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-03-10 00:30:39.124 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig$DuckDbInitializer - DuckDB 初始化完成
+2026-03-10 00:30:39.317 [main] INFO  com.baomidou.mybatisplus.extension.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1761de10
+2026-03-10 00:30:39.410 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-10 00:30:39.418 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-10 00:30:39.423 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - Started FloraAiEcommerceSpringApplication in 3.496 seconds (process running for 5.069)
+2026-03-10 00:34:23.458 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10 00:34:23.479 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-10 00:34:23.484 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-10 00:34:23.487 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-10 00:34:26.632 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-03-10 00:34:26.659 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - Starting FloraAiEcommerceSpringApplication using Java 21.0.6 with PID 9308 (D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring\target\classes started by czj13 in D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring)
+2026-03-10 00:34:26.662 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - The following 1 profile is active: "dev"
+2026-03-10 00:34:27.661 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-10 00:34:27.670 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-10 00:34:27.672 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-10 00:34:27.672 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-10 00:34:27.707 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-10 00:34:27.707 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1021 ms
+2026-03-10 00:34:27.772 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig - DuckDB 内存数据库数据源初始化完成
+2026-03-10 00:34:27.904 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-10 00:34:28.083 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (getNetworkTimeout)
+2026-03-10 00:34:28.087 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.duckdb.DuckDBConnection@5896cb9c
+2026-03-10 00:34:28.087 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-10 00:34:28.090 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig - DuckDB 共享连接创建成功
+2026-03-10 00:34:28.473 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Using the vector table name: t_vector_store. Is empty: false
+2026-03-10 00:34:28.475 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: t_vector_store in schema: public
+2026-03-10 00:34:28.476 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-03-10 00:34:28.661 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig$DuckDbInitializer - DuckDB 初始化完成
+2026-03-10 00:34:28.826 [main] INFO  com.baomidou.mybatisplus.extension.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@549621f3
+2026-03-10 00:34:28.916 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-10 00:34:28.924 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-10 00:34:28.929 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - Started FloraAiEcommerceSpringApplication in 2.52 seconds (process running for 3.202)
+2026-03-10 00:37:55.309 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10 00:37:55.309 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-10 00:37:55.311 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-10 00:37:55.348 [http-nio-8080-exec-2] ERROR com.flora.ai.ecommerce.exception.GlobalExceptionHandler - /analysis/xlsx/upload request fail, 
+org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.handleParseFailure(StandardMultipartHttpServletRequest.java:125) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:112) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.<init>(StandardMultipartHttpServletRequest.java:88) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.resolveMultipart(StandardServletMultipartResolver.java:112) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.checkMultipart(DispatcherServlet.java:1228) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException: The field file exceeds its maximum permitted size of 1048576 bytes.
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2625) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.Request.getParts(Request.java:2484) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.RequestFacade.getParts(RequestFacade.java:773) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:95) ~[spring-web-6.2.6.jar:6.2.6]
+	... 43 more
+Caused by: org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException: The field file exceeds its maximum permitted size of 1048576 bytes.
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemStreamImpl$1.raiseError(FileItemStreamImpl.java:117) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.http.fileupload.util.LimitedInputStream.checkLimit(LimitedInputStream.java:76) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.http.fileupload.util.LimitedInputStream.read(LimitedInputStream.java:135) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95) ~[?:?]
+	at org.apache.tomcat.util.http.fileupload.util.Streams.copy(Streams.java:96) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:292) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2584) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.Request.getParts(Request.java:2484) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.RequestFacade.getParts(RequestFacade.java:773) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:95) ~[spring-web-6.2.6.jar:6.2.6]
+	... 43 more
+2026-03-10 00:39:55.347 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10 00:39:55.370 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-10 00:39:55.377 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-10 00:39:55.380 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-10 00:39:57.337 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-03-10 00:39:57.369 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - Starting FloraAiEcommerceSpringApplication using Java 21.0.6 with PID 30476 (D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring\target\classes started by czj13 in D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring)
+2026-03-10 00:39:57.373 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - The following 1 profile is active: "dev"
+2026-03-10 00:39:58.422 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-10 00:39:58.433 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-10 00:39:58.435 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-10 00:39:58.435 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-10 00:39:58.491 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-10 00:39:58.491 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1095 ms
+2026-03-10 00:39:58.569 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig - DuckDB 内存数据库数据源初始化完成
+2026-03-10 00:39:58.725 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-10 00:39:58.934 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (getNetworkTimeout)
+2026-03-10 00:39:58.939 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.duckdb.DuckDBConnection@4b544732
+2026-03-10 00:39:58.941 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-10 00:39:58.943 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig - DuckDB 共享连接创建成功
+2026-03-10 00:39:59.356 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Using the vector table name: t_vector_store. Is empty: false
+2026-03-10 00:39:59.359 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: t_vector_store in schema: public
+2026-03-10 00:39:59.359 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-03-10 00:39:59.554 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig$DuckDbInitializer - DuckDB 初始化完成
+2026-03-10 00:39:59.743 [main] INFO  com.baomidou.mybatisplus.extension.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6fa590ba
+2026-03-10 00:39:59.836 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-10 00:39:59.843 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-10 00:39:59.848 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - Started FloraAiEcommerceSpringApplication in 2.745 seconds (process running for 3.525)
+2026-03-10 00:40:06.677 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10 00:40:06.677 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-10 00:40:06.677 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-03-10 00:40:06.756 [http-nio-8080-exec-1] INFO  com.flora.ai.ecommerce.service.impl.AnalysisServiceImpl - ## Markdown 问答文件存储成功, 文件名：Order.xlsx -> 存储路径：D:\code\xiaoha-ai-robot\xlsx_files\16b55218-6ff2-41db-a858-763491321460-Order.xlsx
+2026-03-10 00:40:06.761 [event-handler-1] INFO  com.flora.ai.ecommerce.event.listener.MdUploadedListener - ## MdUploadedEvent: MdUploadedEvent(id=null, filePath=D:\code\xiaoha-ai-robot\xlsx_files\16b55218-6ff2-41db-a858-763491321460-Order.xlsx, metadatas=null)
+2026-03-10 00:40:36.843 [event-handler-1] ERROR org.springframework.aop.interceptor.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void com.flora.ai.ecommerce.event.listener.MdUploadedListener.vectorizing(com.flora.ai.ecommerce.event.MdUploadedEvent)
+org.mybatis.spring.MyBatisSystemException: 
+### Error updating database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in com/flora/ai/ecommerce/domain/mapper/MdStorageMapper.java (best guess)
+### The error may involve com.flora.ai.ecommerce.domain.mapper.MdStorageMapper.updateById
+### The error occurred while executing an update
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:99) ~[mybatis-spring-3.0.4.jar:3.0.4]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347) ~[mybatis-spring-3.0.4.jar:3.0.4]
+	at jdk.proxy2/jdk.proxy2.$Proxy97.update(Unknown Source) ~[?:?]
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234) ~[mybatis-spring-3.0.4.jar:3.0.4]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:64) ~[mybatis-plus-core-3.5.12.jar:3.5.12]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:156) ~[mybatis-plus-core-3.5.12.jar:3.5.12]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:93) ~[mybatis-plus-core-3.5.12.jar:3.5.12]
+	at jdk.proxy2/jdk.proxy2.$Proxy100.updateById(Unknown Source) ~[?:?]
+	at com.flora.ai.ecommerce.event.listener.MdUploadedListener.vectorizing(MdUploadedListener.java:50) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114) ~[spring-aop-6.2.6.jar:6.2.6]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in com/flora/ai/ecommerce/domain/mapper/MdStorageMapper.java (best guess)
+### The error may involve com.flora.ai.ecommerce.domain.mapper.MdStorageMapper.updateById
+### The error occurred while executing an update
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:199) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333) ~[mybatis-spring-3.0.4.jar:3.0.4]
+	... 17 more
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:77) ~[mybatis-spring-3.0.4.jar:3.0.4]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:64) ~[mybatis-spring-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:61) ~[mybatis-3.5.19.jar:3.5.19]
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:106) ~[mybatis-plus-extension-3.5.12.jar:3.5.12]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59) ~[mybatis-3.5.19.jar:3.5.19]
+	at jdk.proxy2/jdk.proxy2.$Proxy123.update(Unknown Source) ~[?:?]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333) ~[mybatis-spring-3.0.4.jar:3.0.4]
+	... 17 more
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms (total=1, active=1, idle=0, waiting=0)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:686) ~[HikariCP-5.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179) ~[HikariCP-5.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:144) ~[HikariCP-5.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127) ~[HikariCP-5.1.0.jar:?]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:77) ~[mybatis-spring-3.0.4.jar:3.0.4]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:64) ~[mybatis-spring-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:61) ~[mybatis-3.5.19.jar:3.5.19]
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:106) ~[mybatis-plus-extension-3.5.12.jar:3.5.12]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59) ~[mybatis-3.5.19.jar:3.5.19]
+	at jdk.proxy2/jdk.proxy2.$Proxy123.update(Unknown Source) ~[?:?]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333) ~[mybatis-spring-3.0.4.jar:3.0.4]
+	... 17 more
+2026-03-10 00:41:47.448 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10 00:41:47.470 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-10 00:41:47.474 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-10 00:41:47.478 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-10 00:42:14.201 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-03-10 00:42:14.230 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - Starting FloraAiEcommerceSpringApplication using Java 21.0.6 with PID 3568 (D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring\target\classes started by czj13 in D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring)
+2026-03-10 00:42:14.233 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - The following 1 profile is active: "dev"
+2026-03-10 00:42:15.260 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-10 00:42:15.270 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-10 00:42:15.271 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-10 00:42:15.271 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-10 00:42:15.309 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-10 00:42:15.310 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1051 ms
+2026-03-10 00:42:15.383 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig - DuckDB 内存数据库数据源初始化完成
+2026-03-10 00:42:15.533 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-10 00:42:15.806 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (getNetworkTimeout)
+2026-03-10 00:42:15.812 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.duckdb.DuckDBConnection@4b544732
+2026-03-10 00:42:15.812 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-10 00:42:15.815 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig - DuckDB 共享连接创建成功
+2026-03-10 00:42:16.215 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Using the vector table name: t_vector_store. Is empty: false
+2026-03-10 00:42:16.218 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: t_vector_store in schema: public
+2026-03-10 00:42:16.218 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-03-10 00:42:16.451 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig$DuckDbInitializer - DuckDB 初始化完成
+2026-03-10 00:42:16.649 [main] INFO  com.baomidou.mybatisplus.extension.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72e34f77
+2026-03-10 00:42:16.756 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-10 00:42:16.766 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-10 00:42:16.771 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - Started FloraAiEcommerceSpringApplication in 2.789 seconds (process running for 3.484)
+2026-03-10 00:42:24.173 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10 00:42:24.173 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-10 00:42:24.175 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-10 00:42:24.255 [http-nio-8080-exec-2] INFO  com.flora.ai.ecommerce.service.impl.AnalysisServiceImpl - ## Xlsx 数据文件存储成功, 文件名：Order.xlsx -> 存储路径：D:\code\xiaoha-ai-robot\xlsx_files\296484f7-1a09-4c78-85ac-1224c5b5fb1e-Order.xlsx
+2026-03-10 00:42:24.258 [event-handler-1] INFO  com.flora.ai.ecommerce.event.listener.XlsxUploadedListener - ## 正在加载xlsx文件，导入本地数据库: XlsxUploadedEvent(filePath=D:\code\xiaoha-ai-robot\xlsx_files\296484f7-1a09-4c78-85ac-1224c5b5fb1e-Order.xlsx)
+2026-03-10 00:42:24.601 [event-handler-1] INFO  org.ehcache.core.EhcacheManager - Cache '79d000df-0355-45b4-a28b-c205dce47fd0' created in EhcacheManager.
+2026-03-10 00:42:24.609 [event-handler-1] INFO  org.ehcache.core.EhcacheManager - Cache '79d000df-0355-45b4-a28b-c205dce47fd0' created in EhcacheManager.
+2026-03-10 00:42:25.249 [event-handler-1] INFO  org.ehcache.core.EhcacheManager - Cache '79d000df-0355-45b4-a28b-c205dce47fd0' removed from EhcacheManager.
+2026-03-10 00:42:25.251 [event-handler-1] INFO  org.ehcache.core.EhcacheManager - Cache '79d000df-0355-45b4-a28b-c205dce47fd0' removed from EhcacheManager.
+2026-03-10 00:42:25.255 [event-handler-1] ERROR org.springframework.aop.interceptor.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void com.flora.ai.ecommerce.event.listener.XlsxUploadedListener.LoadXlsx(com.flora.ai.ecommerce.event.XlsxUploadedEvent) throws java.sql.SQLException
+java.lang.RuntimeException: 创建表失败
+	at com.flora.ai.ecommerce.event.listener.XlsxUploadedListener$1.invokeHeadMap(XlsxUploadedListener.java:67) ~[classes/:?]
+	at com.alibaba.excel.event.AnalysisEventListener.invokeHead(AnalysisEventListener.java:19) ~[easyexcel-core-3.3.4.jar:?]
+	at com.alibaba.excel.read.processor.DefaultAnalysisEventProcessor.dealData(DefaultAnalysisEventProcessor.java:111) ~[easyexcel-core-3.3.4.jar:?]
+	at com.alibaba.excel.read.processor.DefaultAnalysisEventProcessor.endRow(DefaultAnalysisEventProcessor.java:50) ~[easyexcel-core-3.3.4.jar:?]
+	at com.alibaba.excel.analysis.v07.handlers.RowTagHandler.endElement(RowTagHandler.java:66) ~[easyexcel-core-3.3.4.jar:?]
+	at com.alibaba.excel.analysis.v07.handlers.sax.XlsxRowHandler.endElement(XlsxRowHandler.java:99) ~[easyexcel-core-3.3.4.jar:?]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:618) ~[?:?]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1728) ~[?:?]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899) ~[?:?]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605) ~[?:?]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542) ~[?:?]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889) ~[?:?]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825) ~[?:?]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[?:?]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224) ~[?:?]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637) ~[?:?]
+	at com.alibaba.excel.analysis.v07.XlsxSaxAnalyser.parseXmlSource(XlsxSaxAnalyser.java:241) ~[easyexcel-core-3.3.4.jar:?]
+	at com.alibaba.excel.analysis.v07.XlsxSaxAnalyser.execute(XlsxSaxAnalyser.java:263) ~[easyexcel-core-3.3.4.jar:?]
+	at com.alibaba.excel.analysis.ExcelAnalyserImpl.analysis(ExcelAnalyserImpl.java:124) ~[easyexcel-core-3.3.4.jar:?]
+	at com.alibaba.excel.ExcelReader.read(ExcelReader.java:66) ~[easyexcel-core-3.3.4.jar:?]
+	at com.alibaba.excel.ExcelReader.read(ExcelReader.java:56) ~[easyexcel-core-3.3.4.jar:?]
+	at com.alibaba.excel.read.builder.ExcelReaderSheetBuilder.doRead(ExcelReaderSheetBuilder.java:65) ~[easyexcel-core-3.3.4.jar:?]
+	at com.flora.ai.ecommerce.event.listener.XlsxUploadedListener.LoadXlsx(XlsxUploadedListener.java:99) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114) ~[spring-aop-6.2.6.jar:6.2.6]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.sql.SQLException: java.sql.SQLException: Parser Error: syntax error at or near "Table"
+	at org.duckdb.DuckDBPreparedStatement.prepare(DuckDBPreparedStatement.java:121) ~[duckdb_jdbc-1.1.3.jar:?]
+	at org.duckdb.DuckDBPreparedStatement.execute(DuckDBPreparedStatement.java:201) ~[duckdb_jdbc-1.1.3.jar:?]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:?]
+	at com.flora.ai.ecommerce.event.listener.XlsxUploadedListener$1.invokeHeadMap(XlsxUploadedListener.java:61) ~[classes/:?]
+	... 32 more
+Caused by: java.sql.SQLException: Parser Error: syntax error at or near "Table"
+	at org.duckdb.DuckDBNative.duckdb_jdbc_prepare(Native Method) ~[duckdb_jdbc-1.1.3.jar:?]
+	at org.duckdb.DuckDBPreparedStatement.prepare(DuckDBPreparedStatement.java:115) ~[duckdb_jdbc-1.1.3.jar:?]
+	at org.duckdb.DuckDBPreparedStatement.execute(DuckDBPreparedStatement.java:201) ~[duckdb_jdbc-1.1.3.jar:?]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:?]
+	at com.flora.ai.ecommerce.event.listener.XlsxUploadedListener$1.invokeHeadMap(XlsxUploadedListener.java:61) ~[classes/:?]
+	... 32 more
+2026-03-10 00:44:50.825 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10 00:44:50.849 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-10 00:44:50.851 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-10 00:44:50.854 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-10 00:44:54.214 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-03-10 00:44:54.240 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - Starting FloraAiEcommerceSpringApplication using Java 21.0.6 with PID 33280 (D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring\target\classes started by czj13 in D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring)
+2026-03-10 00:44:54.244 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - The following 1 profile is active: "dev"
+2026-03-10 00:44:55.248 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-10 00:44:55.258 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-10 00:44:55.261 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-10 00:44:55.261 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-10 00:44:55.296 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-10 00:44:55.296 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1027 ms
+2026-03-10 00:44:55.363 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig - DuckDB 内存数据库数据源初始化完成
+2026-03-10 00:44:55.497 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-10 00:44:55.749 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (getNetworkTimeout)
+2026-03-10 00:44:55.754 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.duckdb.DuckDBConnection@4b544732
+2026-03-10 00:44:55.755 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-10 00:44:55.757 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig - DuckDB 共享连接创建成功
+2026-03-10 00:44:56.163 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Using the vector table name: t_vector_store. Is empty: false
+2026-03-10 00:44:56.167 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: t_vector_store in schema: public
+2026-03-10 00:44:56.167 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-03-10 00:44:56.361 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig$DuckDbInitializer - DuckDB 初始化完成
+2026-03-10 00:44:56.539 [main] INFO  com.baomidou.mybatisplus.extension.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72e34f77
+2026-03-10 00:44:56.629 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-10 00:44:56.637 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-10 00:44:56.641 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - Started FloraAiEcommerceSpringApplication in 2.648 seconds (process running for 3.339)
+2026-03-10 00:45:03.169 [http-nio-8080-exec-9] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10 00:45:03.171 [http-nio-8080-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-10 00:45:03.171 [http-nio-8080-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-03-10 00:45:03.249 [http-nio-8080-exec-9] INFO  com.flora.ai.ecommerce.service.impl.AnalysisServiceImpl - ## Xlsx 数据文件存储成功, 文件名：Order.xlsx -> 存储路径：D:\code\xiaoha-ai-robot\xlsx_files\9dd6ad53-e56c-4675-b5c2-ce3d4f978e68-Order.xlsx
+2026-03-10 00:45:03.252 [event-handler-1] INFO  com.flora.ai.ecommerce.event.listener.XlsxUploadedListener - ## 正在加载xlsx文件，导入本地数据库: XlsxUploadedEvent(filePath=D:\code\xiaoha-ai-robot\xlsx_files\9dd6ad53-e56c-4675-b5c2-ce3d4f978e68-Order.xlsx)
+2026-03-10 00:45:03.533 [event-handler-1] INFO  org.ehcache.core.EhcacheManager - Cache 'c97638ea-62c9-4d5b-9dcb-187dd572d2b9' created in EhcacheManager.
+2026-03-10 00:45:03.541 [event-handler-1] INFO  org.ehcache.core.EhcacheManager - Cache 'c97638ea-62c9-4d5b-9dcb-187dd572d2b9' created in EhcacheManager.
+2026-03-10 00:45:13.986 [event-handler-1] INFO  org.ehcache.core.EhcacheManager - Cache 'c97638ea-62c9-4d5b-9dcb-187dd572d2b9' removed from EhcacheManager.
+2026-03-10 00:45:13.986 [event-handler-1] INFO  org.ehcache.core.EhcacheManager - Cache 'c97638ea-62c9-4d5b-9dcb-187dd572d2b9' removed from EhcacheManager.
+2026-03-10 00:45:13.988 [event-handler-1] INFO  com.flora.ai.ecommerce.event.listener.XlsxUploadedListener - ## xlsx文件导入数据库完成, 表字段为: [order_id, customer_id, order_status, order_purchase_timestamp, order_approved_at, order_delivered_carrier_date, order_delivered_customer_date, order_estimated_delivery_date, timeout]
+2026-03-10 00:46:34.309 [http-nio-8080-exec-5] ERROR com.flora.ai.ecommerce.exception.GlobalExceptionHandler - /analysis/xlsx/query request fail, 
+java.sql.SQLException: java.sql.SQLException: Parser Error: syntax error at or near "Table"
+	at org.duckdb.DuckDBPreparedStatement.prepare(DuckDBPreparedStatement.java:121) ~[duckdb_jdbc-1.1.3.jar:?]
+	at org.duckdb.DuckDBPreparedStatement.executeQuery(DuckDBPreparedStatement.java:207) ~[duckdb_jdbc-1.1.3.jar:?]
+	at com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:110) ~[HikariCP-5.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.executeQuery(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:?]
+	at com.flora.ai.ecommerce.service.impl.AnalysisServiceImpl.verifyData(AnalysisServiceImpl.java:108) ~[classes/:?]
+	at com.flora.ai.ecommerce.service.impl.AnalysisServiceImpl.queryXlsxData(AnalysisServiceImpl.java:91) ~[classes/:?]
+	at com.flora.ai.ecommerce.controller.AnalysisController.queryXlsxData(AnalysisController.java:28) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.sql.SQLException: Parser Error: syntax error at or near "Table"
+	at org.duckdb.DuckDBNative.duckdb_jdbc_prepare(Native Method) ~[duckdb_jdbc-1.1.3.jar:?]
+	at org.duckdb.DuckDBPreparedStatement.prepare(DuckDBPreparedStatement.java:115) ~[duckdb_jdbc-1.1.3.jar:?]
+	... 54 more
+2026-03-10 00:47:25.041 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10 00:47:25.063 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-10 00:47:25.066 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-10 00:47:25.071 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-10 00:47:28.486 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-03-10 00:47:28.515 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - Starting FloraAiEcommerceSpringApplication using Java 21.0.6 with PID 8912 (D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring\target\classes started by czj13 in D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring)
+2026-03-10 00:47:28.518 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - The following 1 profile is active: "dev"
+2026-03-10 00:47:29.569 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-10 00:47:29.578 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-10 00:47:29.580 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-10 00:47:29.580 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-10 00:47:29.616 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-10 00:47:29.616 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1073 ms
+2026-03-10 00:47:29.685 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig - DuckDB 内存数据库数据源初始化完成
+2026-03-10 00:47:29.824 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-10 00:47:29.999 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (getNetworkTimeout)
+2026-03-10 00:47:30.004 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.duckdb.DuckDBConnection@29c1249a
+2026-03-10 00:47:30.005 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-10 00:47:30.007 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig - DuckDB 共享连接创建成功
+2026-03-10 00:47:30.396 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Using the vector table name: t_vector_store. Is empty: false
+2026-03-10 00:47:30.399 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: t_vector_store in schema: public
+2026-03-10 00:47:30.399 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-03-10 00:47:30.588 [main] INFO  com.flora.ai.ecommerce.config.DuckDbConfig$DuckDbInitializer - DuckDB 初始化完成
+2026-03-10 00:47:30.763 [main] INFO  com.baomidou.mybatisplus.extension.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e9319f
+2026-03-10 00:47:30.853 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-10 00:47:30.863 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-10 00:47:30.868 [main] INFO  com.flora.ai.ecommerce.FloraAiEcommerceSpringApplication - Started FloraAiEcommerceSpringApplication in 2.601 seconds (process running for 3.283)
+2026-03-10 00:47:36.445 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10 00:47:36.445 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-10 00:47:36.447 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-10 00:47:36.529 [http-nio-8080-exec-1] INFO  com.flora.ai.ecommerce.service.impl.AnalysisServiceImpl - ## Xlsx 数据文件存储成功, 文件名：Order.xlsx -> 存储路径：D:\code\xiaoha-ai-robot\xlsx_files\6228c3b3-2ba5-48be-884e-91a3857d3679-Order.xlsx
+2026-03-10 00:47:36.532 [event-handler-1] INFO  com.flora.ai.ecommerce.event.listener.XlsxUploadedListener - ## 正在加载xlsx文件，导入本地数据库: XlsxUploadedEvent(filePath=D:\code\xiaoha-ai-robot\xlsx_files\6228c3b3-2ba5-48be-884e-91a3857d3679-Order.xlsx)
+2026-03-10 00:47:36.807 [event-handler-1] INFO  org.ehcache.core.EhcacheManager - Cache '738d1cca-9938-4931-9ecf-b49905d6eb65' created in EhcacheManager.
+2026-03-10 00:47:36.815 [event-handler-1] INFO  org.ehcache.core.EhcacheManager - Cache '738d1cca-9938-4931-9ecf-b49905d6eb65' created in EhcacheManager.
+2026-03-10 00:47:47.572 [event-handler-1] INFO  org.ehcache.core.EhcacheManager - Cache '738d1cca-9938-4931-9ecf-b49905d6eb65' removed from EhcacheManager.
+2026-03-10 00:47:47.573 [event-handler-1] INFO  org.ehcache.core.EhcacheManager - Cache '738d1cca-9938-4931-9ecf-b49905d6eb65' removed from EhcacheManager.
+2026-03-10 00:47:47.574 [event-handler-1] INFO  com.flora.ai.ecommerce.event.listener.XlsxUploadedListener - ## xlsx文件导入数据库完成, 表字段为: [order_id, customer_id, order_status, order_purchase_timestamp, order_approved_at, order_delivered_carrier_date, order_delivered_customer_date, order_estimated_delivery_date, timeout]
+2026-03-10 00:55:47.963 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10 00:55:47.983 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-10 00:55:47.989 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-10 00:55:47.994 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
