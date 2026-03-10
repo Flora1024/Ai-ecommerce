@@ -25,7 +25,7 @@ public class AiChatReqVO {
      */
     private Boolean networkSearch = false;
 
-    @NotBlank(message = "调用的 AI 大模型名称不能为空")
+    @NotBlank(message = "调用的大模型名称不能为空")
     private String modelName;
 
     /**

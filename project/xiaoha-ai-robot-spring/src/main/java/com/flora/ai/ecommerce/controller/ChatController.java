@@ -107,8 +107,6 @@ public class ChatController {
         } else {
             // 添加自定义对话记忆 Advisor（以最新的 50 条消息作为记忆）
             advisors.add(new CustomChatMemoryAdvisor(chatMessageMapper, aiChatReqVO, 50));
-//            // 添加向量存储 RAG Advisor（从知识库检索相关内容）
-//            advisors.add(new VectorStoreRagAdvisor(vectorStore));
         }
 
         // 应用 Advisor 集合
