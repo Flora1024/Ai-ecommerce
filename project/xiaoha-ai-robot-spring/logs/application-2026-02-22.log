@@ -1,0 +1,819 @@
+2026-02-22 21:35:42.100 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-22 21:35:42.146 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - Starting XiaohaAiRobotSpringApplication using Java 21.0.6 with PID 31156 (D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring\target\classes started by czj13 in D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring)
+2026-02-22 21:35:42.151 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - The following 1 profile is active: "dev"
+2026-02-22 21:35:43.557 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-22 21:35:43.570 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-22 21:35:43.572 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-22 21:35:43.572 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-02-22 21:35:43.623 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-22 21:35:43.625 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1436 ms
+2026-02-22 21:35:44.579 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Using the vector table name: t_vector_store. Is empty: false
+2026-02-22 21:35:44.585 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: t_vector_store in schema: public
+2026-02-22 21:35:44.585 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-02-22 21:35:45.108 [main] INFO  com.baomidou.mybatisplus.extension.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78d39a69
+2026-02-22 21:35:45.246 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-22 21:35:45.256 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-22 21:35:45.262 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - Started XiaohaAiRobotSpringApplication in 3.478 seconds (process running for 4.654)
+2026-02-22 21:36:02.452 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-22 21:36:02.452 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-22 21:36:02.453 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-02-22 21:36:02.499 [http-nio-8080-exec-1] INFO  com.quanxiaoha.ai.robot.service.impl.CustomerServiceImpl - ## Markdown 问答文件存储成功, 文件名：example.md -> 存储路径：D:\code\xiaoha-ai-robot\md_files\35fc7d5f-d750-4b4a-b293-483b7bab62f9-example.md
+2026-02-22 21:36:02.554 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Starting...
+2026-02-22 21:36:02.743 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - AI-Robot-HikariCP - Added connection com.p6spy.engine.wrapper.ConnectionWrapper@2e3ea15c
+2026-02-22 21:36:02.744 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Start completed.
+2026-02-22 21:36:02.788 [event-handler-1] INFO  com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - ## AiCustomerServiceMdUploadedEvent: AiCustomerServiceMdUploadedEvent(id=8, filePath=D:\code\xiaoha-ai-robot\md_files\35fc7d5f-d750-4b4a-b293-483b7bab62f9-example.md, metadatas={originalFileName=example.md, mdStorageId=8})
+2026-02-22 21:36:02.847 [event-handler-1] INFO  com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - ## documents: [Document{id='f6068fc4-5b21-4104-858e-811d74b653a2', text='长风浩浩送晚秋', media='null', metadata={originalFileName=example.md, mdStorageId=8}, score=null}]
+2026-02-22 21:36:26.947 [http-nio-8080-exec-3] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [删除 Markdown 文件], 入参: {"id":8}, 请求类: AiCustomerServiceController, 请求方法: deleteMarkdownFile =================================== 
+2026-02-22 21:36:27.030 [http-nio-8080-exec-3] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [删除 Markdown 文件], 耗时: 85ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2026-02-22 21:42:59.994 [http-nio-8080-exec-6] INFO  com.quanxiaoha.ai.robot.service.impl.CustomerServiceImpl - ## Markdown 问答文件存储成功, 文件名：example.md -> 存储路径：D:\code\xiaoha-ai-robot\md_files\3a1a6630-c215-4b02-bfa3-64957b793dd1-example.md
+2026-02-22 21:43:00.003 [event-handler-2] INFO  com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - ## AiCustomerServiceMdUploadedEvent: AiCustomerServiceMdUploadedEvent(id=9, filePath=D:\code\xiaoha-ai-robot\md_files\3a1a6630-c215-4b02-bfa3-64957b793dd1-example.md, metadatas={originalFileName=example.md, mdStorageId=9})
+2026-02-22 21:43:00.010 [event-handler-2] INFO  com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - ## documents: [Document{id='fc8d732d-b395-4c95-a758-b8752df1ff6a', text='长风浩浩送晚秋', media='null', metadata={originalFileName=example.md, mdStorageId=9}, score=null}]
+2026-02-22 21:43:02.141 [http-nio-8080-exec-7] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [查询 Markdown 文件列表], 入参: {"current":1,"size":10}, 请求类: AiCustomerServiceController, 请求方法: findMarkdownFilePageList =================================== 
+2026-02-22 21:43:02.232 [http-nio-8080-exec-7] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [查询 Markdown 文件列表], 耗时: 88ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"id":9,"originalFileName":"example.md","fileSize":"21 B","status":2,"remark":null,"createTime":"2026-02-22 21:42:59","updateTime":"2026-02-22 21:43:00"}],"total":1,"size":10,"current":1,"pages":1} =================================== 
+2026-02-22 21:50:54.308 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-22 21:50:54.330 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-22 21:50:54.334 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Shutdown initiated...
+2026-02-22 21:50:54.335 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Shutdown completed.
+2026-02-22 21:50:58.232 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-22 21:50:58.262 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - Starting XiaohaAiRobotSpringApplication using Java 21.0.6 with PID 32016 (D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring\target\classes started by czj13 in D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring)
+2026-02-22 21:50:58.266 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - The following 1 profile is active: "dev"
+2026-02-22 21:50:59.344 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-22 21:50:59.354 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-22 21:50:59.356 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-22 21:50:59.356 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-02-22 21:50:59.395 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-22 21:50:59.397 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1102 ms
+2026-02-22 21:51:00.053 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Using the vector table name: t_vector_store. Is empty: false
+2026-02-22 21:51:00.056 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: t_vector_store in schema: public
+2026-02-22 21:51:00.056 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-02-22 21:51:00.432 [main] INFO  com.baomidou.mybatisplus.extension.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1bdbf9be
+2026-02-22 21:51:00.534 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-22 21:51:00.542 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-22 21:51:00.545 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - Started XiaohaAiRobotSpringApplication in 2.538 seconds (process running for 3.325)
+2026-02-22 21:51:34.894 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-22 21:51:34.927 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-22 21:51:37.958 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-22 21:51:37.987 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - Starting XiaohaAiRobotSpringApplication using Java 21.0.6 with PID 28972 (D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring\target\classes started by czj13 in D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring)
+2026-02-22 21:51:37.990 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - The following 1 profile is active: "dev"
+2026-02-22 21:51:38.998 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-22 21:51:39.006 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-22 21:51:39.008 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-22 21:51:39.008 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-02-22 21:51:39.046 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-22 21:51:39.046 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1030 ms
+2026-02-22 21:51:39.627 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Using the vector table name: t_vector_store. Is empty: false
+2026-02-22 21:51:39.629 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: t_vector_store in schema: public
+2026-02-22 21:51:39.629 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-02-22 21:51:39.979 [main] INFO  com.baomidou.mybatisplus.extension.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1e7f2e0f
+2026-02-22 21:51:40.087 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-22 21:51:40.094 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-22 21:51:40.099 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - Started XiaohaAiRobotSpringApplication in 2.359 seconds (process running for 3.072)
+2026-02-22 21:52:30.211 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-22 21:52:30.211 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-22 21:52:30.213 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-22 21:52:30.303 [http-nio-8080-exec-1] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [查询 Markdown 文件列表], 入参: {"current":1,"size":10}, 请求类: AiCustomerServiceController, 请求方法: findMarkdownFilePageList =================================== 
+2026-02-22 21:52:30.461 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Starting...
+2026-02-22 21:52:30.604 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - AI-Robot-HikariCP - Added connection com.p6spy.engine.wrapper.ConnectionWrapper@6d23f57
+2026-02-22 21:52:30.605 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Start completed.
+2026-02-22 21:52:30.646 [http-nio-8080-exec-1] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [查询 Markdown 文件列表], 耗时: 345ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"id":9,"originalFileName":"example.md","fileSize":"21 B","status":2,"remark":null,"createTime":"2026-02-22 21:42:59","updateTime":"2026-02-22 21:43:00"}],"total":1,"size":10,"current":1,"pages":1} =================================== 
+2026-02-22 21:52:41.803 [http-nio-8080-exec-9] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [更新 Markdown 文件], 入参: {"id":9,"remark":"第一个md文件"}, 请求类: AiCustomerServiceController, 请求方法: UpdateMarkdownFile =================================== 
+2026-02-22 21:52:41.826 [http-nio-8080-exec-9] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [更新 Markdown 文件], 耗时: 22ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2026-02-22 22:19:30.451 [http-nio-8080-exec-5] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [查询历史对话], 入参: {"current":1,"size":20}, 请求类: ChatController, 请求方法: findChatHistoryPageList =================================== 
+2026-02-22 22:19:30.515 [http-nio-8080-exec-5] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [查询历史对话], 耗时: 69ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"total":0,"size":20,"current":1,"pages":0} =================================== 
+2026-02-22 22:20:52.554 [http-nio-8080-exec-6] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [新建对话], 入参: {"message":"问一下现在大模型上传文件进行分析的功能算是RAG吗？"}, 请求类: ChatController, 请求方法: newChat =================================== 
+2026-02-22 22:20:52.603 [http-nio-8080-exec-6] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [新建对话], 耗时: 48ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"summary":"问一下现在大模型上传文件进行分析的功能算","uuid":"0a951c8b-96c4-4a88-b6a2-bcfa9fce4f29"}} =================================== 
+2026-02-22 22:20:52.979 [http-nio-8080-exec-8] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [查询历史对话], 入参: {"current":1,"size":20}, 请求类: ChatController, 请求方法: findChatHistoryPageList =================================== 
+2026-02-22 22:20:52.987 [http-nio-8080-exec-2] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [查询对话历史消息], 入参: {"current":1,"size":10,"chatId":"0a951c8b-96c4-4a88-b6a2-bcfa9fce4f29"}, 请求类: ChatController, 请求方法: findChatMessagePageList =================================== 
+2026-02-22 22:20:52.994 [http-nio-8080-exec-8] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [查询历史对话], 耗时: 13ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"id":1,"uuid":"0a951c8b-96c4-4a88-b6a2-bcfa9fce4f29","summary":"问一下现在大模型上传文件进行分析的功能算","updateTime":"2026-02-22 22:20:52"}],"total":1,"size":20,"current":1,"pages":1} =================================== 
+2026-02-22 22:20:53.001 [http-nio-8080-exec-10] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [流式对话], 入参: {"message":"问一下现在大模型上传文件进行分析的功能算是RAG吗？","chatId":"0a951c8b-96c4-4a88-b6a2-bcfa9fce4f29","networkSearch":false,"modelName":"deepseek-r1","temperature":0.7}, 请求类: ChatController, 请求方法: chat =================================== 
+2026-02-22 22:20:53.023 [http-nio-8080-exec-2] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [查询对话历史消息], 耗时: 35ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"total":0,"size":10,"current":1,"pages":0} =================================== 
+2026-02-22 22:20:53.064 [http-nio-8080-exec-10] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [流式对话], 耗时: 44ms, 出参: {"scanAvailable":true,"prefetch":-1} =================================== 
+2026-02-22 22:20:53.092 [http-nio-8080-exec-10] INFO  com.quanxiaoha.ai.robot.advisor.CustomChatMemoryAdvisor - ## 自定义聊天记忆 Advisor
+2026-02-22 22:20:54.076 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.077 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.099 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.134 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.233 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.289 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.290 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.381 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.440 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.444 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.531 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.535 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.590 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.595 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.686 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.690 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.743 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.745 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.838 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.900 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:54.974 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.069 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.070 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.130 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.308 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.310 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.365 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.460 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.515 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.517 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.646 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.648 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.783 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.805 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.898 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.900 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:55.974 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.164 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.166 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.238 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.300 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.301 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.397 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.414 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.476 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.479 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.570 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.572 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.629 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.799 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.799 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.903 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.904 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:56.993 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.055 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.057 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.169 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.192 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.284 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.427 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.481 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.588 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.588 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.634 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.733 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.827 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.831 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.962 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:57.966 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.023 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.160 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.216 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.354 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.355 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.449 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.454 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.551 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.610 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.613 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.706 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.808 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.861 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:58.904 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.026 [http-nio-8080-exec-3] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [流式对话], 入参: {"message":"问一下现在大模型上传文件进行分析的功能算是RAG吗？","chatId":"0a951c8b-96c4-4a88-b6a2-bcfa9fce4f29","networkSearch":false,"modelName":"deepseek-r1","temperature":0.7}, 请求类: ChatController, 请求方法: chat =================================== 
+2026-02-22 22:20:59.034 [http-nio-8080-exec-3] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [流式对话], 耗时: 8ms, 出参: {"scanAvailable":true,"prefetch":-1} =================================== 
+2026-02-22 22:20:59.034 [http-nio-8080-exec-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomChatMemoryAdvisor - ## 自定义聊天记忆 Advisor
+2026-02-22 22:20:59.043 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.140 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.154 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.236 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.239 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.313 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.412 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.470 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.470 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.563 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.598 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.633 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.659 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.661 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.702 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.733 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.758 [boundedElastic-1] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: 这是一个
+2026-02-22 22:20:59.761 [boundedElastic-1] WARN  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - !!!
+Performing asynchronous handling through the default Spring MVC SimpleAsyncTaskExecutor.
+This executor is not suitable for production use under load.
+Please, configure an AsyncTaskExecutor through the WebMvc config.
+-------------------------------
+!!!
+2026-02-22 22:20:59.779 [http-nio-8080-exec-1] ERROR com.quanxiaoha.ai.robot.exception.GlobalExceptionHandler - /chat/completion request error, 
+java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:102) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542) ~[?:?]
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:122) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1380) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:764) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:728) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:712) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:574) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:156) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:216) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1271) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:408) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.Response.action(Response.java:208) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:300) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:266) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:133) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleServletOutputStream.flush(StandardServletAsyncWebRequest.java:415) ~[spring-web-6.2.6.jar:6.2.6]
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:155) ~[?:?]
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1205) ~[jackson-core-2.18.3.jar:2.18.3]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1063) ~[jackson-databind-2.18.3.jar:2.18.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:486) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.writeInternal(AbstractGenericHttpMessageConverter.java:135) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:235) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$DefaultSseEmitterHandler.sendInternal(ResponseBodyEmitterReturnValueHandler.java:310) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$DefaultSseEmitterHandler.send(ResponseBodyEmitterReturnValueHandler.java:297) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.sendInternal(ResponseBodyEmitter.java:226) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.send(ResponseBodyEmitter.java:217) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:135) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$SseEmitterSubscriber.send(ReactiveTypeHandler.java:440) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$AbstractEmitterSubscriber.run(ReactiveTypeHandler.java:359) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at io.micrometer.context.ContextSnapshot.lambda$wrap$0(ContextSnapshot.java:91) ~[context-propagation-1.1.3.jar:1.1.3]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-02-22 22:20:59.787 [http-nio-8080-exec-1] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.quanxiaoha.ai.robot.exception.GlobalExceptionHandler#handleOtherException(HttpServletRequest, Exception)
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.quanxiaoha.ai.robot.utils.Response] with preset Content-Type 'text/event-stream'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:365) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:208) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:471) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:73) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:182) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1359) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1161) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:612) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationDispatcher.doDispatch(ApplicationDispatcher.java:540) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationDispatcher.dispatch(ApplicationDispatcher.java:511) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.AsyncContextImpl$AsyncRunnable.run(AsyncContextImpl.java:599) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.AsyncContextImpl.doInternalDispatch(AsyncContextImpl.java:342) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.asyncDispatch(CoyoteAdapter.java:239) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessor.dispatch(AbstractProcessor.java:243) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-02-22 22:20:59.789 [http-nio-8080-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] threw exception
+java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:102) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542) ~[?:?]
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:122) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1380) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:764) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:728) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:712) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:574) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:156) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:216) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1271) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:408) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.Response.action(Response.java:208) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:300) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:266) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:133) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleServletOutputStream.flush(StandardServletAsyncWebRequest.java:415) ~[spring-web-6.2.6.jar:6.2.6]
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:155) ~[?:?]
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1205) ~[jackson-core-2.18.3.jar:2.18.3]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1063) ~[jackson-databind-2.18.3.jar:2.18.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:486) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.writeInternal(AbstractGenericHttpMessageConverter.java:135) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:235) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$DefaultSseEmitterHandler.sendInternal(ResponseBodyEmitterReturnValueHandler.java:310) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$DefaultSseEmitterHandler.send(ResponseBodyEmitterReturnValueHandler.java:297) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.sendInternal(ResponseBodyEmitter.java:226) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.send(ResponseBodyEmitter.java:217) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:135) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$SseEmitterSubscriber.send(ReactiveTypeHandler.java:440) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$AbstractEmitterSubscriber.run(ReactiveTypeHandler.java:359) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at io.micrometer.context.ContextSnapshot.lambda$wrap$0(ContextSnapshot.java:91) ~[context-propagation-1.1.3.jar:1.1.3]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-02-22 22:20:59.790 [http-nio-8080-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:102) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542) ~[?:?]
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:122) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1380) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:764) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:728) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:712) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:574) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:156) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:216) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1271) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:408) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.Response.action(Response.java:208) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:300) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:266) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:133) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleServletOutputStream.flush(StandardServletAsyncWebRequest.java:415) ~[spring-web-6.2.6.jar:6.2.6]
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:155) ~[?:?]
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1205) ~[jackson-core-2.18.3.jar:2.18.3]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1063) ~[jackson-databind-2.18.3.jar:2.18.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:486) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.writeInternal(AbstractGenericHttpMessageConverter.java:135) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:235) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$DefaultSseEmitterHandler.sendInternal(ResponseBodyEmitterReturnValueHandler.java:310) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$DefaultSseEmitterHandler.send(ResponseBodyEmitterReturnValueHandler.java:297) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.sendInternal(ResponseBodyEmitter.java:226) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.send(ResponseBodyEmitter.java:217) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:135) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$SseEmitterSubscriber.send(ReactiveTypeHandler.java:440) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$AbstractEmitterSubscriber.run(ReactiveTypeHandler.java:359) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at io.micrometer.context.ContextSnapshot.lambda$wrap$0(ContextSnapshot.java:91) ~[context-propagation-1.1.3.jar:1.1.3]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-02-22 22:20:59.823 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.872 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:20:59.872 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.014 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.120 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.123 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.257 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.368 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.371 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.468 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.468 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.567 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.710 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.810 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.813 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.951 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:00.951 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.010 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.152 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.253 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.256 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.442 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.503 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.506 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.605 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.710 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.712 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.850 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.852 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:01.917 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.059 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.060 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.160 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.161 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.259 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.453 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.455 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.587 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.592 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.740 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.740 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.884 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:02.965 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.140 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.142 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.244 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.349 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.351 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.417 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.417 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.539 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.567 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.624 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.710 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.727 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.837 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.842 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:03.944 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:04.056 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:04.235 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:04.302 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:04.305 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:04.449 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:04.560 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:04.563 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:04.670 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:04.734 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:04.823 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:04.992 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:05.080 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:05.092 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:05.229 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:05.232 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:05.297 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:05.300 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:05.384 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:05.389 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:21:05.492 [boundedElastic-2] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: 大
+2026-02-22 22:21:05.494 [http-nio-8080-exec-9] ERROR com.quanxiaoha.ai.robot.exception.GlobalExceptionHandler - /chat/completion request error, 
+org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleHttpServletResponse.handleIOException(StandardServletAsyncWebRequest.java:346) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleServletOutputStream.flush(StandardServletAsyncWebRequest.java:418) ~[spring-web-6.2.6.jar:6.2.6]
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:155) ~[?:?]
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1205) ~[jackson-core-2.18.3.jar:2.18.3]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1063) ~[jackson-databind-2.18.3.jar:2.18.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:486) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.writeInternal(AbstractGenericHttpMessageConverter.java:135) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:235) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$DefaultSseEmitterHandler.sendInternal(ResponseBodyEmitterReturnValueHandler.java:310) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$DefaultSseEmitterHandler.send(ResponseBodyEmitterReturnValueHandler.java:297) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.sendInternal(ResponseBodyEmitter.java:226) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.send(ResponseBodyEmitter.java:217) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:135) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$SseEmitterSubscriber.send(ReactiveTypeHandler.java:440) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$AbstractEmitterSubscriber.run(ReactiveTypeHandler.java:359) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at io.micrometer.context.ContextSnapshot.lambda$wrap$0(ContextSnapshot.java:91) ~[context-propagation-1.1.3.jar:1.1.3]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:304) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:266) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:133) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleServletOutputStream.flush(StandardServletAsyncWebRequest.java:415) ~[spring-web-6.2.6.jar:6.2.6]
+	... 16 more
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:102) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542) ~[?:?]
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:122) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1380) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:764) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:728) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:712) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:574) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:156) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:216) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1271) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:408) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.Response.action(Response.java:208) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:300) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:266) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:133) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleServletOutputStream.flush(StandardServletAsyncWebRequest.java:415) ~[spring-web-6.2.6.jar:6.2.6]
+	... 16 more
+2026-02-22 22:21:05.494 [http-nio-8080-exec-9] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.quanxiaoha.ai.robot.exception.GlobalExceptionHandler#handleOtherException(HttpServletRequest, Exception)
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.quanxiaoha.ai.robot.utils.Response] with preset Content-Type 'text/event-stream'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:365) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:208) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:471) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:73) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:182) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1359) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1161) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:612) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationDispatcher.doDispatch(ApplicationDispatcher.java:540) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationDispatcher.dispatch(ApplicationDispatcher.java:511) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.AsyncContextImpl$AsyncRunnable.run(AsyncContextImpl.java:599) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.AsyncContextImpl.doInternalDispatch(AsyncContextImpl.java:342) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.asyncDispatch(CoyoteAdapter.java:239) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessor.dispatch(AbstractProcessor.java:243) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-02-22 22:24:27.904 [http-nio-8080-exec-4] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [流式对话], 入参: {"message":"问一下现在大模型上传文件进行分析的功能算是RAG吗？","chatId":"0a951c8b-96c4-4a88-b6a2-bcfa9fce4f29","networkSearch":false,"modelName":"deepseek-r1","temperature":0.7}, 请求类: ChatController, 请求方法: chat =================================== 
+2026-02-22 22:24:27.911 [http-nio-8080-exec-4] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [流式对话], 耗时: 7ms, 出参: {"scanAvailable":true,"prefetch":-1} =================================== 
+2026-02-22 22:24:27.912 [http-nio-8080-exec-4] INFO  com.quanxiaoha.ai.robot.advisor.CustomChatMemoryAdvisor - ## 自定义聊天记忆 Advisor
+2026-02-22 22:24:28.527 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:28.560 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:28.598 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:28.638 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:28.743 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:28.747 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:28.802 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:28.803 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:28.901 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:28.905 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:28.969 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.069 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.140 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.142 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.241 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.350 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.450 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.515 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.518 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.620 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.623 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.685 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.788 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:29.896 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.001 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.103 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.208 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.209 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.315 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.336 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.434 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.551 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.552 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.567 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.670 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.695 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.779 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.783 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.919 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.952 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:30.953 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.099 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.100 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.206 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.317 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.337 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.415 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.520 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.524 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.585 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.655 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.737 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.757 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.840 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.859 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:31.963 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.141 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.145 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.197 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.322 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.327 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.430 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.512 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.532 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.641 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.645 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.811 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.830 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.938 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:32.941 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:33.044 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:33.107 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:33.196 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:33.296 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:33.299 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:33.410 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:33.472 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:33.512 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:33.627 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:33.769 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:33.774 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:33.919 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.026 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.134 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.137 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.262 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.264 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.306 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.528 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.529 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.563 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.688 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.689 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.734 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.852 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.853 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.919 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:34.925 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.123 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.161 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.163 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.248 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.297 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.330 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.433 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.437 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.543 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.545 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.649 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.714 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.727 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.816 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.923 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:35.926 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.027 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.133 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.136 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.276 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.282 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.385 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.547 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.547 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.639 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.644 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.752 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.815 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:36.892 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.040 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.042 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.150 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.339 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.342 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.403 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.546 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.548 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.617 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.704 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.726 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.829 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.833 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.934 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:37.937 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.042 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.144 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.255 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.400 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.405 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.549 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.654 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.655 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.720 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.827 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.830 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.891 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:38.975 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:39.169 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:39.172 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:39.231 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:39.234 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:39.337 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:39.398 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:39.484 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: null
+2026-02-22 22:24:39.486 [boundedElastic-3] INFO  com.quanxiaoha.ai.robot.advisor.CustomStreamLoggerAndMessage2DBAdvisor - ## chunk: 是的，**
+2026-02-22 22:24:39.488 [http-nio-8080-exec-5] ERROR com.quanxiaoha.ai.robot.exception.GlobalExceptionHandler - /chat/completion request error, 
+org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleHttpServletResponse.handleIOException(StandardServletAsyncWebRequest.java:346) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleServletOutputStream.flush(StandardServletAsyncWebRequest.java:418) ~[spring-web-6.2.6.jar:6.2.6]
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:155) ~[?:?]
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1205) ~[jackson-core-2.18.3.jar:2.18.3]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1063) ~[jackson-databind-2.18.3.jar:2.18.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:486) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.writeInternal(AbstractGenericHttpMessageConverter.java:135) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:235) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$DefaultSseEmitterHandler.sendInternal(ResponseBodyEmitterReturnValueHandler.java:310) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$DefaultSseEmitterHandler.send(ResponseBodyEmitterReturnValueHandler.java:297) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.sendInternal(ResponseBodyEmitter.java:226) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.send(ResponseBodyEmitter.java:217) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:135) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$SseEmitterSubscriber.send(ReactiveTypeHandler.java:440) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$AbstractEmitterSubscriber.run(ReactiveTypeHandler.java:359) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at io.micrometer.context.ContextSnapshot.lambda$wrap$0(ContextSnapshot.java:91) ~[context-propagation-1.1.3.jar:1.1.3]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:304) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:266) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:133) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleServletOutputStream.flush(StandardServletAsyncWebRequest.java:415) ~[spring-web-6.2.6.jar:6.2.6]
+	... 16 more
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:102) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542) ~[?:?]
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:122) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1380) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:764) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:728) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:712) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:574) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:156) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:216) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1271) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:408) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.Response.action(Response.java:208) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:300) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:266) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:133) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleServletOutputStream.flush(StandardServletAsyncWebRequest.java:415) ~[spring-web-6.2.6.jar:6.2.6]
+	... 16 more
+2026-02-22 22:24:39.489 [http-nio-8080-exec-5] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.quanxiaoha.ai.robot.exception.GlobalExceptionHandler#handleOtherException(HttpServletRequest, Exception)
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.quanxiaoha.ai.robot.utils.Response] with preset Content-Type 'text/event-stream'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:365) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:208) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:471) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:73) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:182) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1359) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1161) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:612) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationDispatcher.doDispatch(ApplicationDispatcher.java:540) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationDispatcher.dispatch(ApplicationDispatcher.java:511) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.AsyncContextImpl$AsyncRunnable.run(AsyncContextImpl.java:599) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.AsyncContextImpl.doInternalDispatch(AsyncContextImpl.java:342) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.asyncDispatch(CoyoteAdapter.java:239) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessor.dispatch(AbstractProcessor.java:243) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2026-02-22 22:24:53.127 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-22 22:24:53.148 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-22 22:24:53.152 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Shutdown initiated...
+2026-02-22 22:24:53.153 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Shutdown completed.

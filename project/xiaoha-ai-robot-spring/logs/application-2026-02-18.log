@@ -1,0 +1,309 @@
+2026-02-18 18:02:43.108 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-18 18:02:43.137 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - Starting XiaohaAiRobotSpringApplication using Java 21.0.6 with PID 35648 (D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring\target\classes started by czj13 in D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring)
+2026-02-18 18:02:43.143 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - The following 1 profile is active: "dev"
+2026-02-18 18:02:44.418 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-18 18:02:44.431 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-18 18:02:44.431 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-18 18:02:44.432 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-02-18 18:02:44.474 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-18 18:02:44.474 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1299 ms
+2026-02-18 18:02:45.193 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Using the vector table name: t_vector_store. Is empty: false
+2026-02-18 18:02:45.198 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: t_vector_store in schema: public
+2026-02-18 18:02:45.198 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-02-18 18:02:45.590 [main] INFO  com.baomidou.mybatisplus.extension.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1da6ee17
+2026-02-18 18:02:45.693 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-18 18:02:45.700 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-18 18:02:45.706 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - Started XiaohaAiRobotSpringApplication in 2.863 seconds (process running for 3.751)
+2026-02-18 18:02:55.487 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-18 18:02:55.487 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-18 18:02:55.489 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-18 18:02:55.616 [http-nio-8080-exec-2] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [查询历史对话], 入参: {"current":1,"size":10}, 请求类: ChatController, 请求方法: findChatHistoryPageList =================================== 
+2026-02-18 18:02:55.807 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Starting...
+2026-02-18 18:02:56.061 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - AI-Robot-HikariCP - Added connection com.p6spy.engine.wrapper.ConnectionWrapper@17112c7a
+2026-02-18 18:02:56.063 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Start completed.
+2026-02-18 18:02:56.111 [http-nio-8080-exec-2] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [查询历史对话], 耗时: 499ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"id":26,"uuid":"ec7d8869-7f51-4f89-937a-83c53a3e354a","summary":"你好帅哥","updateTime":"2025-11-15 19:37:30"}],"total":1,"size":10,"current":1,"pages":1} =================================== 
+2026-02-18 18:03:04.081 [http-nio-8080-exec-3] INFO  com.quanxiaoha.ai.robot.service.impl.CustomerServiceImpl - ## Markdown 问答文件存储成功, 文件名：example.md -> 存储路径：D:\code\xiaoha-ai-robot\md_files\627c8a82-9a6b-45f4-8c80-8be33b033e7b-example.md
+2026-02-18 18:03:04.101 [event-handler-1] INFO  com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - ## AiCustomerServiceMdUploadedEvent: AiCustomerServiceMdUploadedEvent(id=4, filePath=D:\code\xiaoha-ai-robot\md_files\627c8a82-9a6b-45f4-8c80-8be33b033e7b-example.md, metadatas={originalFileName=example.md, mdStorageId=4})
+2026-02-18 18:03:04.132 [event-handler-1] INFO  com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - ## documents: [Document{id='5c6eda4d-d847-40d7-81e8-7bc98113c498', text='长风浩浩送晚秋', media='null', metadata={originalFileName=example.md, mdStorageId=4}, score=null}]
+2026-02-18 18:03:04.746 [event-handler-1] ERROR com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - 向量化失败
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [SELECT *, embedding <=> ? AS distance FROM public.t_vector_store WHERE embedding <=> ? < ?  ORDER BY distance LIMIT ? ]
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:112) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:116) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:723) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:754) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:767) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:825) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.ai.vectorstore.pgvector.PgVectorStore.doSimilaritySearch(PgVectorStore.java:372) ~[spring-ai-pgvector-store-1.0.0.jar:1.0.0]
+	at org.springframework.ai.vectorstore.observation.AbstractObservationVectorStore.lambda$similaritySearch$7(AbstractObservationVectorStore.java:126) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.14.6.jar:1.14.6]
+	at org.springframework.ai.vectorstore.observation.AbstractObservationVectorStore.similaritySearch(AbstractObservationVectorStore.java:125) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	at com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener.lambda$vectorizing$0(AiCustomerServiceMdUploadedListener.java:72) ~[classes/:?]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.6.jar:6.2.6]
+	at com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener.vectorizing(AiCustomerServiceMdUploadedListener.java:60) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114) ~[spring-aop-6.2.6.jar:6.2.6]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.postgresql.util.PSQLException: 不明的类型 vector
+	at org.postgresql.jdbc.PgPreparedStatement.setPGobject(PgPreparedStatement.java:525) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgPreparedStatement.setObject(PgPreparedStatement.java:1037) ~[postgresql-42.7.5.jar:42.7.5]
+	at com.p6spy.engine.wrapper.PreparedStatementWrapper.setObject(PreparedStatementWrapper.java:347) ~[p6spy-3.9.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setObject(HikariProxyPreparedStatement.java) ~[HikariCP-5.1.0.jar:?]
+	at org.springframework.jdbc.core.StatementCreatorUtils.setValue(StatementCreatorUtils.java:448) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValueInternal(StatementCreatorUtils.java:242) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValue(StatementCreatorUtils.java:174) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.doSetValue(ArgumentPreparedStatementSetter.java:72) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.setValues(ArgumentPreparedStatementSetter.java:51) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:730) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	... 21 more
+2026-02-18 18:57:59.561 [http-nio-8080-exec-5] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [查询历史对话], 入参: {"current":1,"size":20}, 请求类: ChatController, 请求方法: findChatHistoryPageList =================================== 
+2026-02-18 18:57:59.640 [http-nio-8080-exec-5] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [查询历史对话], 耗时: 87ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"id":26,"uuid":"ec7d8869-7f51-4f89-937a-83c53a3e354a","summary":"你好帅哥","updateTime":"2025-11-15 19:37:30"}],"total":1,"size":20,"current":1,"pages":1} =================================== 
+2026-02-18 18:58:07.727 [AI-Robot-HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - AI-Robot-HikariCP - Thread starvation or clock leap detected (housekeeper delta=27m41s120ms149µs600ns).
+2026-02-18 19:54:03.798 [AI-Robot-HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - AI-Robot-HikariCP - Thread starvation or clock leap detected (housekeeper delta=35m55s796ms804µs799ns).
+2026-02-18 20:13:49.711 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-18 20:13:49.746 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-18 20:13:49.759 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Shutdown initiated...
+2026-02-18 20:13:49.766 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Shutdown completed.
+2026-02-18 20:13:52.890 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-18 20:13:52.928 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - Starting XiaohaAiRobotSpringApplication using Java 21.0.6 with PID 33100 (D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring\target\classes started by czj13 in D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring)
+2026-02-18 20:13:52.931 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - The following 1 profile is active: "dev"
+2026-02-18 20:13:54.342 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-18 20:13:54.365 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-18 20:13:54.366 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-18 20:13:54.366 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-02-18 20:13:54.420 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-18 20:13:54.420 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1454 ms
+2026-02-18 20:13:55.255 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Using the vector table name: t_vector_store. Is empty: false
+2026-02-18 20:13:55.258 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: t_vector_store in schema: public
+2026-02-18 20:13:55.258 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-02-18 20:13:55.699 [main] INFO  com.baomidou.mybatisplus.extension.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@224b4d61
+2026-02-18 20:13:55.814 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-18 20:13:55.822 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-18 20:13:55.828 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - Started XiaohaAiRobotSpringApplication in 3.251 seconds (process running for 4.45)
+2026-02-18 20:14:00.838 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-18 20:14:00.839 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-18 20:14:00.841 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-18 20:14:00.954 [http-nio-8080-exec-1] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [查询历史对话], 入参: {"current":1,"size":20}, 请求类: ChatController, 请求方法: findChatHistoryPageList =================================== 
+2026-02-18 20:14:01.120 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Starting...
+2026-02-18 20:14:01.301 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - AI-Robot-HikariCP - Added connection com.p6spy.engine.wrapper.ConnectionWrapper@217f41d7
+2026-02-18 20:14:01.302 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Start completed.
+2026-02-18 20:14:01.335 [http-nio-8080-exec-1] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [查询历史对话], 耗时: 390ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"total":0,"size":20,"current":1,"pages":0} =================================== 
+2026-02-18 20:14:18.601 [http-nio-8080-exec-2] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [查询历史对话], 入参: {"current":1,"size":20}, 请求类: ChatController, 请求方法: findChatHistoryPageList =================================== 
+2026-02-18 20:14:18.609 [http-nio-8080-exec-2] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [查询历史对话], 耗时: 8ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"total":0,"size":20,"current":1,"pages":0} =================================== 
+2026-02-18 20:15:01.377 [http-nio-8080-exec-4] INFO  com.quanxiaoha.ai.robot.service.impl.CustomerServiceImpl - ## Markdown 问答文件存储成功, 文件名：example.md -> 存储路径：D:\code\xiaoha-ai-robot\md_files\4969bbb8-cc8c-4f3e-8633-7b0d5a12944a-example.md
+2026-02-18 20:15:01.409 [event-handler-1] INFO  com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - ## AiCustomerServiceMdUploadedEvent: AiCustomerServiceMdUploadedEvent(id=5, filePath=D:\code\xiaoha-ai-robot\md_files\4969bbb8-cc8c-4f3e-8633-7b0d5a12944a-example.md, metadatas={originalFileName=example.md, mdStorageId=5})
+2026-02-18 20:15:01.447 [event-handler-1] INFO  com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - ## documents: [Document{id='6a1edce3-5535-4ee4-96f6-b83f86c25588', text='长风浩浩送晚秋', media='null', metadata={originalFileName=example.md, mdStorageId=5}, score=null}]
+2026-02-18 20:21:12.907 [http-nio-8080-exec-8] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [删除 Markdown 文件], 入参: {"id":5}, 请求类: AiCustomerServiceController, 请求方法: deleteMarkdownFile =================================== 
+2026-02-18 20:21:12.986 [http-nio-8080-exec-8] ERROR com.quanxiaoha.ai.robot.exception.GlobalExceptionHandler - /customer-service/md/delete request error, 
+org.springframework.ai.vectorstore.filter.FilterExpressionTextParser$FilterExpressionParseException: Source: <unknown>, Line: 1:20, Error: no viable alternative at input 'mdStorageId 5'
+	at org.springframework.ai.vectorstore.filter.FilterExpressionTextParser.parse(FilterExpressionTextParser.java:155) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	at org.springframework.ai.vectorstore.SearchRequest$Builder.filterExpression(SearchRequest.java:286) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	at org.springframework.ai.vectorstore.VectorStore.delete(VectorStore.java:81) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	at com.quanxiaoha.ai.robot.service.impl.CustomerServiceImpl.deleteMarkdownFile(CustomerServiceImpl.java:145) ~[classes/:?]
+	at com.quanxiaoha.ai.robot.controller.AiCustomerServiceController.deleteMarkdownFile(AiCustomerServiceController.java:33) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.2.6.jar:6.2.6]
+	at com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect.doAround(ApiOperationLogAspect.java:55) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:642) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:632) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.6.jar:6.2.6]
+	at com.quanxiaoha.ai.robot.controller.AiCustomerServiceController$$SpringCGLIB$$0.deleteMarkdownFile(<generated>) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.antlr.v4.runtime.NoViableAltException
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.noViableAlt(ParserATNSimulator.java:2014) ~[antlr4-runtime-4.13.1.jar:4.13.1]
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.execATN(ParserATNSimulator.java:445) ~[antlr4-runtime-4.13.1.jar:4.13.1]
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.adaptivePredict(ParserATNSimulator.java:371) ~[antlr4-runtime-4.13.1.jar:4.13.1]
+	at org.springframework.ai.vectorstore.filter.antlr4.FiltersParser.booleanExpression(FiltersParser.java:254) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	at org.springframework.ai.vectorstore.filter.antlr4.FiltersParser.where(FiltersParser.java:221) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	at org.springframework.ai.vectorstore.filter.FilterExpressionTextParser.parse(FilterExpressionTextParser.java:147) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	... 69 more
+2026-02-18 20:24:23.497 [http-nio-8080-exec-10] INFO  com.quanxiaoha.ai.robot.service.impl.CustomerServiceImpl - ## Markdown 问答文件存储成功, 文件名：example.md -> 存储路径：D:\code\xiaoha-ai-robot\md_files\58e3a966-37dd-4503-b5ee-c3d8024b6ea1-example.md
+2026-02-18 20:24:23.510 [event-handler-2] INFO  com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - ## AiCustomerServiceMdUploadedEvent: AiCustomerServiceMdUploadedEvent(id=6, filePath=D:\code\xiaoha-ai-robot\md_files\58e3a966-37dd-4503-b5ee-c3d8024b6ea1-example.md, metadatas={originalFileName=example.md, mdStorageId=6})
+2026-02-18 20:24:23.516 [event-handler-2] INFO  com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - ## documents: [Document{id='644c58b5-7960-46d1-bf0d-1b76c0f57103', text='长风浩浩送晚秋', media='null', metadata={originalFileName=example.md, mdStorageId=6}, score=null}]
+2026-02-18 20:24:42.551 [http-nio-8080-exec-1] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [删除 Markdown 文件], 入参: {"id":6}, 请求类: AiCustomerServiceController, 请求方法: deleteMarkdownFile =================================== 
+2026-02-18 20:24:42.562 [http-nio-8080-exec-1] ERROR com.quanxiaoha.ai.robot.exception.GlobalExceptionHandler - /customer-service/md/delete request error, 
+org.springframework.ai.vectorstore.filter.FilterExpressionTextParser$FilterExpressionParseException: Source: <unknown>, Line: 1:20, Error: no viable alternative at input 'mdStorageId 6'
+	at org.springframework.ai.vectorstore.filter.FilterExpressionTextParser.parse(FilterExpressionTextParser.java:155) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	at org.springframework.ai.vectorstore.SearchRequest$Builder.filterExpression(SearchRequest.java:286) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	at org.springframework.ai.vectorstore.VectorStore.delete(VectorStore.java:81) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	at com.quanxiaoha.ai.robot.service.impl.CustomerServiceImpl.deleteMarkdownFile(CustomerServiceImpl.java:145) ~[classes/:?]
+	at com.quanxiaoha.ai.robot.controller.AiCustomerServiceController.deleteMarkdownFile(AiCustomerServiceController.java:33) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.2.6.jar:6.2.6]
+	at com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect.doAround(ApiOperationLogAspect.java:55) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:642) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:632) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.6.jar:6.2.6]
+	at com.quanxiaoha.ai.robot.controller.AiCustomerServiceController$$SpringCGLIB$$0.deleteMarkdownFile(<generated>) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.antlr.v4.runtime.NoViableAltException
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.noViableAlt(ParserATNSimulator.java:2014) ~[antlr4-runtime-4.13.1.jar:4.13.1]
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.execATN(ParserATNSimulator.java:445) ~[antlr4-runtime-4.13.1.jar:4.13.1]
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.adaptivePredict(ParserATNSimulator.java:371) ~[antlr4-runtime-4.13.1.jar:4.13.1]
+	at org.springframework.ai.vectorstore.filter.antlr4.FiltersParser.booleanExpression(FiltersParser.java:254) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	at org.springframework.ai.vectorstore.filter.antlr4.FiltersParser.where(FiltersParser.java:221) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	at org.springframework.ai.vectorstore.filter.FilterExpressionTextParser.parse(FilterExpressionTextParser.java:147) ~[spring-ai-vector-store-1.0.0.jar:1.0.0]
+	... 69 more
+2026-02-18 20:25:37.757 [http-nio-8080-exec-2] INFO  com.quanxiaoha.ai.robot.service.impl.CustomerServiceImpl - ## Markdown 问答文件存储成功, 文件名：example.md -> 存储路径：D:\code\xiaoha-ai-robot\md_files\199e68b0-54b4-4295-8916-f0b5472936b0-example.md
+2026-02-18 20:25:37.768 [event-handler-3] INFO  com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - ## AiCustomerServiceMdUploadedEvent: AiCustomerServiceMdUploadedEvent(id=7, filePath=D:\code\xiaoha-ai-robot\md_files\199e68b0-54b4-4295-8916-f0b5472936b0-example.md, metadatas={originalFileName=example.md, mdStorageId=7})
+2026-02-18 20:25:37.775 [event-handler-3] INFO  com.quanxiaoha.ai.robot.event.listener.AiCustomerServiceMdUploadedListener - ## documents: [Document{id='c9e1ae54-a05a-4b70-aeb1-6c1645c7f5f7', text='长风浩浩送晚秋', media='null', metadata={originalFileName=example.md, mdStorageId=7}, score=null}]
+2026-02-18 20:28:02.796 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-18 20:28:02.821 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-18 20:28:02.828 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Shutdown initiated...
+2026-02-18 20:28:02.831 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Shutdown completed.
+2026-02-18 20:28:07.454 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-02-18 20:28:07.488 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - Starting XiaohaAiRobotSpringApplication using Java 21.0.6 with PID 37848 (D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring\target\classes started by czj13 in D:\code\xiaoha-ai-robot\project\xiaoha-ai-robot-spring)
+2026-02-18 20:28:07.491 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - The following 1 profile is active: "dev"
+2026-02-18 20:28:08.977 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-18 20:28:08.992 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-18 20:28:08.993 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-18 20:28:08.994 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-02-18 20:28:09.041 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-18 20:28:09.041 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1513 ms
+2026-02-18 20:28:09.924 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Using the vector table name: t_vector_store. Is empty: false
+2026-02-18 20:28:09.927 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: t_vector_store in schema: public
+2026-02-18 20:28:09.927 [main] INFO  org.springframework.ai.vectorstore.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-02-18 20:28:10.385 [main] INFO  com.baomidou.mybatisplus.extension.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ef27d66
+2026-02-18 20:28:10.505 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-18 20:28:10.515 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-18 20:28:10.521 [main] INFO  com.quanxiaoha.ai.robot.XiaohaAiRobotSpringApplication - Started XiaohaAiRobotSpringApplication in 3.379 seconds (process running for 4.42)
+2026-02-18 20:29:49.083 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-18 20:29:49.083 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-18 20:29:49.085 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-18 20:29:49.208 [http-nio-8080-exec-2] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [删除 Markdown 文件], 入参: {"id":7}, 请求类: AiCustomerServiceController, 请求方法: deleteMarkdownFile =================================== 
+2026-02-18 20:29:49.227 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Starting...
+2026-02-18 20:29:49.395 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - AI-Robot-HikariCP - Added connection com.p6spy.engine.wrapper.ConnectionWrapper@2f128889
+2026-02-18 20:29:49.397 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Start completed.
+2026-02-18 20:29:49.514 [http-nio-8080-exec-2] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [删除 Markdown 文件], 耗时: 314ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2026-02-18 21:28:04.420 [http-nio-8080-exec-4] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求开始: [查询历史对话], 入参: {"current":1,"size":20}, 请求类: ChatController, 请求方法: findChatHistoryPageList =================================== 
+2026-02-18 21:28:04.759 [http-nio-8080-exec-4] INFO  com.quanxiaoha.ai.robot.aspect.ApiOperationLogAspect - ====== 请求结束: [查询历史对话], 耗时: 342ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"total":0,"size":20,"current":1,"pages":0} =================================== 
+2026-02-18 21:28:12.131 [AI-Robot-HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - AI-Robot-HikariCP - Thread starvation or clock leap detected (housekeeper delta=33m22s245ms822µs300ns).
+2026-02-18 23:33:40.955 [AI-Robot-HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - AI-Robot-HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h45m28s501ms542µs100ns).
+2026-02-18 23:33:44.044 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-18 23:33:44.082 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-18 23:33:44.101 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Shutdown initiated...
+2026-02-18 23:33:44.105 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Shutdown completed.
