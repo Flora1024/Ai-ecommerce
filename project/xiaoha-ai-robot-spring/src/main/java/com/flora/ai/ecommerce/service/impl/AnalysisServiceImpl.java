@@ -7,6 +7,7 @@ import com.flora.ai.ecommerce.event.MdUploadedEvent;
 import com.flora.ai.ecommerce.event.XlsxUploadedEvent;
 import com.flora.ai.ecommerce.exception.BizException;
 import com.flora.ai.ecommerce.model.vo.xlsxQuery.DuckdbSqlReqVO;
+import com.flora.ai.ecommerce.prompt.DataAnalysisPrompt;
 import com.flora.ai.ecommerce.service.AnalysisService;
 import com.flora.ai.ecommerce.utils.Response;
 import com.google.common.collect.Maps;
@@ -14,6 +15,8 @@ import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.duckdb.DuckDBConnection;
+import org.springframework.ai.chat.prompt.Prompt;
+import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -93,8 +96,7 @@ public class AnalysisServiceImpl implements AnalysisService {
     }
 
     @Override
-    public Response<?> queryXlsxData(DuckdbSqlReqVO duckdbSqlReqVO) throws SQLException {
-        String sql = duckdbSqlReqVO.getSql();
+    public Response<?> queryXlsxData(String sql) throws SQLException {
 
         // 检查表是否存在
         if (!isTableExists()) {
@@ -108,6 +110,19 @@ public class AnalysisServiceImpl implements AnalysisService {
         return Response.success();
     }
 
+    @Override
+    public Prompt buildPromptFirstStage(String userMessage) {
+        PromptTemplate promptTemplate = DataAnalysisPrompt.SQL_GENERATION_PROMPT_TEMPLATE;
+        // 获取表名、表结构、用户问题
+        return promptTemplate.create(
+                Map.of(
+                        "tableName", tableName,
+                        "schemaSummary", getTableSchema(),
+                        "question", userMessage
+                )
+        );
+    }
+
     private boolean isXlsxFile(String fileName) {
         return fileName.endsWith(".xlsx");
     }
@@ -119,5 +134,19 @@ public class AnalysisServiceImpl implements AnalysisService {
         // 检查表是否存在
         int count = jdbcTemplate.queryForObject(checkExistsSql, params, Integer.class);
         return count != 0;
+    }
+
+    private String getTableSchema() {
+        // 查询表结构
+        String sql = "DESCRIBE " + tableName;
+        StringBuilder schemaSummary = new StringBuilder();
+        jdbcTemplate.query(sql, (rs, rowNum) -> {
+            schemaSummary.append(rs.getString("column_name"))
+                    .append(" : ")
+                    .append(rs.getString("column_type"))
+                    .append("\n");
+            return null;
+        });
+        return schemaSummary.toString();
     }
 }
