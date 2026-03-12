@@ -20,6 +20,9 @@ public enum ResponseCodeEnum implements BaseExceptionInterface {
     MARKDOWN_FILE_NOT_FOUND("2004", "该 Markdown 文件不存在"),
     MARKDOWN_FILE_CANT_DELETE("2005", "正在处理中的 Markdown 问答文件，不允许删除"),
     ONLY_SUPPORT_XLSX("2006", "数据分析仅支持 Markdown 格式的文件"),
+    TABLE_NOT_FOUND("2007", "数据表不存在"),
+    ONLY_SUPPORT_SELECT("2008", "只允许执行 SELECT 查询"),
+    SQL_ERROR("2009", "SQL 错误"),
     ;
 
     private String errorCode;

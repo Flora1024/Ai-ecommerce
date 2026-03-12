@@ -1,6 +1,5 @@
 package com.flora.ai.ecommerce.service;
 
-import com.flora.ai.ecommerce.model.vo.xlsxQuery.DuckdbSqlReqVO;
 import com.flora.ai.ecommerce.utils.Response;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,7 +20,7 @@ public interface AnalysisService {
      * @param sql
      * @return
      */
-    public Response<?> queryXlsxData(String sql) throws SQLException;
+    public String executeSql2Markdown(String sql) throws SQLException;
 
     /**
      * 构建一阶段提示词
@@ -29,5 +28,12 @@ public interface AnalysisService {
      * @return
      */
     public Prompt buildPromptFirstStage(String userMessage);
+
+    /**
+     * 构建二阶段提示词
+     * @param resultMarkdown
+     * @return
+     */
+    public Prompt buildPromptSecondStage(String userMessage, String sql, String resultMarkdown);
 
 }

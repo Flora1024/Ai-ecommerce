@@ -30,10 +30,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.*;
 import java.time.LocalDateTime;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import static com.fasterxml.jackson.databind.type.LogicalType.Collection;
 
@@ -52,6 +50,11 @@ public class AnalysisServiceImpl implements AnalysisService {
     @Value("xlsx_data")
     private String tableName;
 
+    /**
+     * 上传 xlsx 文件
+     * @param file
+     * @return
+     */
     @Override
     public Response<?> uploadXlsxFile(MultipartFile file) {
         // 校验文件是否为空
@@ -95,21 +98,36 @@ public class AnalysisServiceImpl implements AnalysisService {
         }
     }
 
+    /**
+     * 执行SQL查询
+     * @param sql
+     * @return
+     */
     @Override
-    public Response<?> queryXlsxData(String sql) throws SQLException {
+    public String executeSql2Markdown(String sql) {
 
         // 检查表是否存在
         if (!isTableExists()) {
-            return Response.fail("表不存在");
+            throw new BizException(ResponseCodeEnum.TABLE_NOT_FOUND);
         }
 
-        // todo SQL校验
+        // SQL校验
+        if (!sql.trim().toUpperCase().startsWith("SELECT")) {
+            throw new BizException(ResponseCodeEnum.ONLY_SUPPORT_SELECT);
+        }
 
-        // todo 执行SQL查询语句，返回结果用什么封装？
+        // 执行SQL查询语句
+        List<Map<String, Object>> results = jdbcTemplate.queryForList(sql, new MapSqlParameterSource());
 
-        return Response.success();
+        // 转换成 Markdown
+        return convertToMarkdownTable(results);
     }
 
+    /**
+     * 构建一阶段提示词
+     * @param userMessage
+     * @return
+     */
     @Override
     public Prompt buildPromptFirstStage(String userMessage) {
         PromptTemplate promptTemplate = DataAnalysisPrompt.SQL_GENERATION_PROMPT_TEMPLATE;
@@ -119,6 +137,26 @@ public class AnalysisServiceImpl implements AnalysisService {
                         "tableName", tableName,
                         "schemaSummary", getTableSchema(),
                         "question", userMessage
+                )
+        );
+    }
+
+    /**
+     * 构建二阶段提示词
+     * @param userMessage
+     * @param sql
+     * @param resultMarkdown
+     * @return
+     */
+    @Override
+    public Prompt buildPromptSecondStage(String userMessage, String sql, String resultMarkdown) {
+        PromptTemplate promptTemplate = DataAnalysisPrompt.ANSWER_GENERATION_PROMPT_TEMPLATE;
+        // 获取用户问题、SQL、结果Markdown
+        return promptTemplate.create(
+                Map.of(
+                        "question", userMessage,
+                        "sql", sql,
+                        "resultMarkdown", resultMarkdown
                 )
         );
     }
@@ -148,5 +186,39 @@ public class AnalysisServiceImpl implements AnalysisService {
             return null;
         });
         return schemaSummary.toString();
+    }
+
+    private String convertToMarkdownTable(List<Map<String, Object>> results) {
+        if (results.isEmpty()) {
+            return "查询结果为空";
+        }
+
+        // 获取列名（从第一行提取）
+        Set<String> columns = results.get(0).keySet();
+
+        StringBuilder markdown = new StringBuilder();
+
+        // 表头
+        markdown.append("| ").append(String.join(" | ", columns)).append(" |\n");
+
+        // 分隔线
+        markdown.append(columns.stream()
+                .map(c -> "---")
+                .collect(Collectors.joining(" | ", "| ", " |\n")));
+
+        // 数据行
+        for (Map<String, Object> row : results) {
+            String rowStr = columns.stream()
+                    .map(col -> String.valueOf(row.getOrDefault(col, "")))
+                    .collect(Collectors.joining(" | ", "| ", " |\n"));
+            markdown.append(rowStr);
+        }
+
+        // 如果数据太多，添加摘要信息
+        if (results.size() > 100) {
+            markdown.append("\n> 注：数据共 ").append(results.size()).append(" 行，仅展示前 100 行");
+        }
+
+        return markdown.toString();
     }
 }

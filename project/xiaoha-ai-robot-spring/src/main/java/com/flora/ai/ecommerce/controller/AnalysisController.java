@@ -1,6 +1,8 @@
 package com.flora.ai.ecommerce.controller;
 
 import com.flora.ai.ecommerce.aspect.ApiOperationLog;
+import com.flora.ai.ecommerce.enums.ResponseCodeEnum;
+import com.flora.ai.ecommerce.exception.BizException;
 import com.flora.ai.ecommerce.model.AIResponse;
 import com.flora.ai.ecommerce.model.vo.chat.DataAnalysisReqVO;
 import com.flora.ai.ecommerce.model.vo.xlsxQuery.DuckdbSqlReqVO;
@@ -15,6 +17,7 @@ import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.ai.openai.api.OpenAiApi;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
+import org.springframework.validation.BindException;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -44,16 +47,10 @@ public class AnalysisController {
     }
 
     /**
-     * 查询 xlsx 文件数据
-     * @param
+     * 数据分析
+     * @param dataAnalysisReqVO
      * @return
-     * @throws SQLException
      */
-    @PostMapping("/xlsx/query")
-    public Response<?> queryXlsxData(@RequestParam("sql") String sql) throws SQLException {
-        return analysisService.queryXlsxData(sql);
-    }
-
     @PostMapping(value = "/completion", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     @ApiOperationLog(description = "数据分析")
     public Flux<AIResponse> chat(@RequestBody @Validated DataAnalysisReqVO dataAnalysisReqVO) {
@@ -74,8 +71,24 @@ public class AnalysisController {
                 .build();
 
         // 构建 ChatClientRequestSpec
-        ChatClient.ChatClientRequestSpec chatClientRequestSpec = ChatClient.create(chatModel)
+        ChatClient.ChatClientRequestSpec chatClientPreRequestSpec = ChatClient.create(chatModel)
                 .prompt(analysisService.buildPromptFirstStage(userMessage))
+                .options(OpenAiChatOptions.builder()
+                        .model(modelName)
+                        .temperature(temperature)
+                        .build());
+
+        String sql = chatClientPreRequestSpec.call().content();
+        String resultMarkdown = "";
+        try {
+            resultMarkdown = analysisService.executeSql2Markdown(sql);
+        } catch (SQLException e) {
+            throw new BizException(ResponseCodeEnum.SQL_ERROR);
+        }
+
+        // 构建 ChatClientRequestSpec
+        ChatClient.ChatClientRequestSpec chatClientRequestSpec = ChatClient.create(chatModel)
+                .prompt(analysisService.buildPromptSecondStage(userMessage, sql, resultMarkdown))
                 .options(OpenAiChatOptions.builder()
                         .model(modelName)
                         .temperature(temperature)
@@ -83,9 +96,10 @@ public class AnalysisController {
 
         // todo 添加Advisor
 
-        String sql = chatClientRequestSpec.call().content();
-
-        // todo 分析服务基于本地数据库执行SQL
-        return null;
+        // 流式输出
+        return chatClientRequestSpec
+                .stream()
+                .content()
+                .mapNotNull(text -> AIResponse.builder().v(text).build()); // 构建返参 AIResponse
     }
 }
