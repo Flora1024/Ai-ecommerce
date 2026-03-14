@@ -1,5 +1,0 @@
-{
-    "java.compile.nullAnalysis.mode": "automatic",
-    "java.errors.unusedImport.severity": "ignore",
-    "java.errors.unusedVariable.severity": "ignore"
-}

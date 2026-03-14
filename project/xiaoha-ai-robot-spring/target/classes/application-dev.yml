@@ -1,5 +1,8 @@
 spring:
+    # 第一个数据源 - PostgreSQL 数据库
     datasource:
+#        driver-class-name: org.postgresql.Driver                     # 数据库驱动类名
+#        url: jdbc:postgresql://localhost:5432/postgres               # 数据库连接 URL
         driver-class-name: com.p6spy.engine.spy.P6SpyDriver          # 数据库驱动类名
         url: jdbc:p6spy:postgresql://localhost:5432/postgres         # 数据库连接 URL
         username: postgres                                           # 数据库用户名
@@ -55,8 +58,8 @@ searxng:                                                             # SearXNG �
     count: 10                                                        # 每次从搜索结果中，提取的最大数量
 
 customer-service:
-    md-storage-path: D:\\Dev\\personal-projects\\xiaoha-ai-robot\\md_files           # 问答文件存储路径
-    xlsx-storage-path: D:\\Dev\\personal-projects\\xiaoha-ai-robot\\xlsx_files       # 数据表文件存储路径
+    md-storage-path: D:\\code\\ai-ecommerce\\Ai-ecommerce\\md_files          # 问答文件存储路径
+    xlsx-storage-path: D:\\code\\ai-ecommerce\\Ai-ecommerce\\xlsx_files       # 数据表文件存储路径
     model: deepseek-v3
     temperature: 0.0
 

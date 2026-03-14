@@ -9083,7 +9083,7 @@ org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable repre
 2026-03-08 10:45:26.186 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Starting...
 2026-03-08 10:45:26.360 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - AI-Robot-HikariCP - Added connection com.p6spy.engine.wrapper.ConnectionWrapper@1c438b22
 2026-03-08 10:45:26.361 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Start completed.
-2026-03-08 10:45:26.999 [http-nio-8080-exec-1] INFO  com.flora.ai.ecommerce.advisor.CustomerServiceAdvisor - ## 增强后的提示词如下: Prompt{messages=[UserMessage{content='你是一名专业的电商订单管理助手，精通各种电商问答情景。请根据以下上下文信息回答用户问题。
+2026-03-08 10:45:26.999 [http-nio-8080-exec-1] INFO  com.flora.ai.ecommerce.advisor.RagServiceAdvisor - ## 增强后的提示词如下: Prompt{messages=[UserMessage{content='你是一名专业的电商订单管理助手，精通各种电商问答情景。请根据以下上下文信息回答用户问题。
 
 ## 上下文信息
 问题回答： 广东
@@ -9326,7 +9326,7 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 2026-03-08 10:47:58.286 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Starting...
 2026-03-08 10:47:58.445 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - AI-Robot-HikariCP - Added connection com.p6spy.engine.wrapper.ConnectionWrapper@78a7a6fd
 2026-03-08 10:47:58.446 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - AI-Robot-HikariCP - Start completed.
-2026-03-08 10:47:58.549 [http-nio-8080-exec-1] INFO  com.flora.ai.ecommerce.advisor.CustomerServiceAdvisor - ## 增强后的提示词如下: Prompt{messages=[UserMessage{content='你是一名专业的电商订单管理助手，精通各种电商问答情景。请根据以下上下文信息回答用户问题。
+2026-03-08 10:47:58.549 [http-nio-8080-exec-1] INFO  com.flora.ai.ecommerce.advisor.RagServiceAdvisor - ## 增强后的提示词如下: Prompt{messages=[UserMessage{content='你是一名专业的电商订单管理助手，精通各种电商问答情景。请根据以下上下文信息回答用户问题。
 
 ## 上下文信息
 问题回答： 广东
@@ -9380,7 +9380,7 @@ Please, configure an AsyncTaskExecutor through the WebMvc config.
 !!!
 2026-03-08 10:48:24.512 [http-nio-8080-exec-9] INFO  com.flora.ai.ecommerce.aspect.ApiOperationLogAspect - ====== 请求开始: [电商助手问答 [RAG]], 入参: {"message":"有什么女士香水推荐？","chatId":"dacec278-25fa-49d2-a1b4-34f34dbd9644"}, 请求类: AiCustomerServiceController, 请求方法: chat =================================== 
 2026-03-08 10:48:24.520 [http-nio-8080-exec-9] INFO  com.flora.ai.ecommerce.aspect.ApiOperationLogAspect - ====== 请求结束: [电商助手问答 [RAG]], 耗时: 7ms, 出参: {"scanAvailable":true,"prefetch":-1} =================================== 
-2026-03-08 10:48:24.863 [http-nio-8080-exec-9] INFO  com.flora.ai.ecommerce.advisor.CustomerServiceAdvisor - ## 增强后的提示词如下: Prompt{messages=[UserMessage{content='你是一名专业的电商订单管理助手，精通各种电商问答情景。请根据以下上下文信息回答用户问题。
+2026-03-08 10:48:24.863 [http-nio-8080-exec-9] INFO  com.flora.ai.ecommerce.advisor.RagServiceAdvisor - ## 增强后的提示词如下: Prompt{messages=[UserMessage{content='你是一名专业的电商订单管理助手，精通各种电商问答情景。请根据以下上下文信息回答用户问题。
 
 ## 上下文信息
 商品信息：蔚兰蔚蓝蓝男士香水湛蓝车载斩女香持久淡香blue通勤小众清新约会 回答： 不相关
@@ -9479,7 +9479,7 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
 2026-03-08 10:50:43.109 [http-nio-8080-exec-8] INFO  com.flora.ai.ecommerce.aspect.ApiOperationLogAspect - ====== 请求开始: [电商助手问答 [RAG]], 入参: {"message":"什么鞋子适合孩子穿","chatId":"dacec278-25fa-49d2-a1b4-34f34dbd9644"}, 请求类: AiCustomerServiceController, 请求方法: chat =================================== 
 2026-03-08 10:50:43.116 [http-nio-8080-exec-8] INFO  com.flora.ai.ecommerce.aspect.ApiOperationLogAspect - ====== 请求结束: [电商助手问答 [RAG]], 耗时: 6ms, 出参: {"scanAvailable":true,"prefetch":-1} =================================== 
-2026-03-08 10:50:43.552 [http-nio-8080-exec-8] INFO  com.flora.ai.ecommerce.advisor.CustomerServiceAdvisor - ## 增强后的提示词如下: Prompt{messages=[UserMessage{content='你是一名专业的电商订单管理助手，精通各种电商问答情景。请根据以下上下文信息回答用户问题。
+2026-03-08 10:50:43.552 [http-nio-8080-exec-8] INFO  com.flora.ai.ecommerce.advisor.RagServiceAdvisor - ## 增强后的提示词如下: Prompt{messages=[UserMessage{content='你是一名专业的电商订单管理助手，精通各种电商问答情景。请根据以下上下文信息回答用户问题。
 
 ## 上下文信息
 电商网页标签: Crocs 儿童洞洞男童女童夏季新款透气轻便凉鞋我每次使用童鞋/青少年鞋都特别开心。童鞋/青少年鞋以其鲜明的个性论证了我时尚的品位。自打开始使用童鞋/青少年鞋后，我已离不开它了。我体验过多款产品，但童鞋/青少年鞋无疑是最好的。我希望所有人都知道童鞋/青少年鞋是我最喜欢的产品。我每次使用童鞋/青少年鞋都特别开心。 候选类目：其它运动鞋,童鞋/青少年鞋,涉水鞋/溯溪鞋,户外鞋靴,凉鞋,运动沙滩鞋/凉鞋,棒球鞋,室内鞋 回答： 凉鞋,户外鞋靴,童鞋/青少年鞋,运动沙滩鞋/凉鞋
@@ -9527,7 +9527,7 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 ', properties={messageType=USER}, messageType=USER}], modelOptions=OpenAiChatOptions: {"streamUsage":false,"model":"deepseek-v3","temperature":0.0}}
 2026-03-08 10:51:08.440 [http-nio-8080-exec-7] INFO  com.flora.ai.ecommerce.aspect.ApiOperationLogAspect - ====== 请求开始: [电商助手问答 [RAG]], 入参: {"message":"什么香水好用","chatId":"dacec278-25fa-49d2-a1b4-34f34dbd9644"}, 请求类: AiCustomerServiceController, 请求方法: chat =================================== 
 2026-03-08 10:51:08.447 [http-nio-8080-exec-7] INFO  com.flora.ai.ecommerce.aspect.ApiOperationLogAspect - ====== 请求结束: [电商助手问答 [RAG]], 耗时: 6ms, 出参: {"scanAvailable":true,"prefetch":-1} =================================== 
-2026-03-08 10:51:08.671 [http-nio-8080-exec-7] INFO  com.flora.ai.ecommerce.advisor.CustomerServiceAdvisor - ## 增强后的提示词如下: Prompt{messages=[UserMessage{content='你是一名专业的电商订单管理助手，精通各种电商问答情景。请根据以下上下文信息回答用户问题。
+2026-03-08 10:51:08.671 [http-nio-8080-exec-7] INFO  com.flora.ai.ecommerce.advisor.RagServiceAdvisor - ## 增强后的提示词如下: Prompt{messages=[UserMessage{content='你是一名专业的电商订单管理助手，精通各种电商问答情景。请根据以下上下文信息回答用户问题。
 
 ## 上下文信息
 商品信息：蔚兰蔚蓝蓝男士香水湛蓝车载斩女香持久淡香blue通勤小众清新约会 回答： 不相关
@@ -9575,7 +9575,7 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 ', properties={messageType=USER}, messageType=USER}], modelOptions=OpenAiChatOptions: {"streamUsage":false,"model":"deepseek-v3","temperature":0.0}}
 2026-03-08 10:51:26.108 [http-nio-8080-exec-1] INFO  com.flora.ai.ecommerce.aspect.ApiOperationLogAspect - ====== 请求开始: [电商助手问答 [RAG]], 入参: {"message":"有哪些好用的洗面奶","chatId":"dacec278-25fa-49d2-a1b4-34f34dbd9644"}, 请求类: AiCustomerServiceController, 请求方法: chat =================================== 
 2026-03-08 10:51:26.115 [http-nio-8080-exec-1] INFO  com.flora.ai.ecommerce.aspect.ApiOperationLogAspect - ====== 请求结束: [电商助手问答 [RAG]], 耗时: 7ms, 出参: {"scanAvailable":true,"prefetch":-1} =================================== 
-2026-03-08 10:51:26.337 [http-nio-8080-exec-1] INFO  com.flora.ai.ecommerce.advisor.CustomerServiceAdvisor - ## 增强后的提示词如下: Prompt{messages=[UserMessage{content='你是一名专业的电商订单管理助手，精通各种电商问答情景。请根据以下上下文信息回答用户问题。
+2026-03-08 10:51:26.337 [http-nio-8080-exec-1] INFO  com.flora.ai.ecommerce.advisor.RagServiceAdvisor - ## 增强后的提示词如下: Prompt{messages=[UserMessage{content='你是一名专业的电商订单管理助手，精通各种电商问答情景。请根据以下上下文信息回答用户问题。
 
 ## 上下文信息
 回答： 润肤乳、沐浴露等美妆产品
