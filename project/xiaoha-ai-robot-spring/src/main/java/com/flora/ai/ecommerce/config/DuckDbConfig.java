@@ -1,5 +1,6 @@
 package com.flora.ai.ecommerce.config;
 
+import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -27,12 +28,27 @@ import java.sql.Statement;
 public class DuckDbConfig {
 
     /**
-     * DuckDB 数据源配置属性
+     * 主数据源配置属性
      */
     @Bean
-    @ConfigurationProperties("spring.datasource-duckdb")
-    public DataSourceProperties duckdbDataSourceProperties() {
+    @ConfigurationProperties("spring.datasource")
+    public DataSourceProperties dataSourceProperties() {
         return new DataSourceProperties();
+    }
+
+    /**
+     * 主数据源 - PostgreSQL
+     */
+    @Bean(name = "dataSource", destroyMethod = "close")
+    @Primary
+    public HikariDataSource dataSource() {
+        DataSourceProperties properties = dataSourceProperties();
+        HikariConfig config = new HikariConfig();
+        config.setDriverClassName(properties.getDriverClassName());
+        config.setJdbcUrl(properties.getUrl());
+        config.setUsername(properties.getUsername());
+        config.setPassword(properties.getPassword());
+        return new HikariDataSource(config);
     }
 
     /**
@@ -42,17 +58,16 @@ public class DuckDbConfig {
      */
     @Bean(name = "duckdbDataSource", destroyMethod = "close")
     public HikariDataSource duckdbDataSource() {
-        HikariDataSource dataSource = duckdbDataSourceProperties()
-                .initializeDataSourceBuilder()
-                .type(HikariDataSource.class)
-                .build();
-
+        HikariConfig config = new HikariConfig();
+        config.setDriverClassName("org.duckdb.DuckDBDriver");
+        config.setJdbcUrl("jdbc:duckdb:");
         // 内存模式下，连接池必须设置为 1，确保只有一个共享连接
-        dataSource.setMaximumPoolSize(1);
-        dataSource.setMinimumIdle(1);
+        config.setMaximumPoolSize(1);
+        config.setMinimumIdle(1);
+        config.setPoolName("DuckDB-Pool");
 
         log.info("DuckDB 内存数据库数据源初始化完成");
-        return dataSource;
+        return new HikariDataSource(config);
     }
 
     /**

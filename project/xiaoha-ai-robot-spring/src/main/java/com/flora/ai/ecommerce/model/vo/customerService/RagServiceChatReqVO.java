@@ -1,5 +1,6 @@
 package com.flora.ai.ecommerce.model.vo.customerService;
 
+import com.flora.ai.ecommerce.model.vo.ChatRequest;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AiCustomerServiceChatReqVO {
+public class RagServiceChatReqVO implements ChatRequest {
 
     @NotBlank(message = "message不能为空")
     private String message;

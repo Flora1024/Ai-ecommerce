@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.google.common.collect.Lists;
 import com.flora.ai.ecommerce.domain.dos.ChatMessageDO;
 import com.flora.ai.ecommerce.domain.mapper.ChatMessageMapper;
-import com.flora.ai.ecommerce.model.vo.chat.AiChatReqVO;
+import com.flora.ai.ecommerce.model.vo.ChatRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClientRequest;
 import org.springframework.ai.chat.client.ChatClientResponse;
@@ -24,12 +24,12 @@ import java.util.Objects;
 public class CustomChatMemoryAdvisor implements StreamAdvisor {
 
     private final ChatMessageMapper chatMessageMapper;
-    private final AiChatReqVO aiChatReqVO;
+    private final ChatRequest chatRequest;
     private final int limit;
 
-    public CustomChatMemoryAdvisor(ChatMessageMapper chatMessageMapper, AiChatReqVO aiChatReqVO, int limit) {
+    public CustomChatMemoryAdvisor(ChatMessageMapper chatMessageMapper, ChatRequest chatRequest, int limit) {
         this.chatMessageMapper = chatMessageMapper;
-        this.aiChatReqVO = aiChatReqVO;
+        this.chatRequest = chatRequest;
         this.limit = limit;
     }
 
@@ -48,7 +48,7 @@ public class CustomChatMemoryAdvisor implements StreamAdvisor {
         log.info("## 自定义聊天记忆 Advisor");
 
         // 对话 id
-        String chatUuid = aiChatReqVO.getChatId();
+        String chatUuid = chatRequest.getChatId();
 
         // 查询数据库拉取最新的聊天记录
         List<ChatMessageDO> messages = chatMessageMapper.selectList(Wrappers.<ChatMessageDO>lambdaQuery()

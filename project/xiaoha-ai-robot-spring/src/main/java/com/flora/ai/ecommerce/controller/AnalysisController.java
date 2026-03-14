@@ -1,36 +1,47 @@
 package com.flora.ai.ecommerce.controller;
 
+import com.flora.ai.ecommerce.advisor.CustomChatMemoryAdvisor;
+import com.flora.ai.ecommerce.advisor.CustomStreamLoggerAndMessage2DBAdvisor;
 import com.flora.ai.ecommerce.aspect.ApiOperationLog;
+import com.flora.ai.ecommerce.domain.mapper.ChatMessageMapper;
 import com.flora.ai.ecommerce.enums.ResponseCodeEnum;
 import com.flora.ai.ecommerce.exception.BizException;
 import com.flora.ai.ecommerce.model.AIResponse;
 import com.flora.ai.ecommerce.model.vo.chat.DataAnalysisReqVO;
-import com.flora.ai.ecommerce.model.vo.xlsxQuery.DuckdbSqlReqVO;
 import com.flora.ai.ecommerce.service.AnalysisService;
 import com.flora.ai.ecommerce.utils.Response;
 import jakarta.annotation.Resource;
+import lombok.extern.slf4j.Slf4j;
+import org.checkerframework.checker.index.qual.SameLen;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.api.Advisor;
 import org.springframework.ai.chat.model.ChatModel;
-import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.ai.openai.api.OpenAiApi;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
-import org.springframework.validation.BindException;
+import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Flux;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
+@Slf4j
 @RequestMapping("/analysis")
 public class AnalysisController {
 
     @Resource
     private AnalysisService analysisService;
+    @Resource
+    private ChatMessageMapper chatMessageMapper;
+    @Resource
+    private TransactionTemplate transactionTemplate;
     @Value("${spring.ai.openai.base-url}")
     private String baseUrl;
     @Value("${spring.ai.openai.api-key}")
@@ -79,6 +90,9 @@ public class AnalysisController {
                         .build());
 
         String sql = chatClientPreRequestSpec.call().content();
+
+        log.info("大模型生成的SQL:{}", sql);
+
         String resultMarkdown = "";
         try {
             resultMarkdown = analysisService.executeSql2Markdown(sql);
@@ -94,7 +108,11 @@ public class AnalysisController {
                         .temperature(temperature)
                         .build());
 
-        // todo 添加Advisor
+        // 添加 Advisor
+        List<Advisor> advisors = new ArrayList<>();
+        advisors.add(new CustomStreamLoggerAndMessage2DBAdvisor(chatMessageMapper, dataAnalysisReqVO, transactionTemplate));
+        advisors.add(new CustomChatMemoryAdvisor(chatMessageMapper, dataAnalysisReqVO, 50));
+        chatClientRequestSpec.advisors(advisors);
 
         // 流式输出
         return chatClientRequestSpec

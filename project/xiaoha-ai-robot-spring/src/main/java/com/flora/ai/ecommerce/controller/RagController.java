@@ -1,7 +1,10 @@
 package com.flora.ai.ecommerce.controller;
 
-import com.flora.ai.ecommerce.advisor.CustomerServiceAdvisor;
+import com.flora.ai.ecommerce.advisor.CustomChatMemoryAdvisor;
+import com.flora.ai.ecommerce.advisor.CustomStreamLoggerAndMessage2DBAdvisor;
+import com.flora.ai.ecommerce.advisor.RagServiceAdvisor;
 import com.flora.ai.ecommerce.aspect.ApiOperationLog;
+import com.flora.ai.ecommerce.domain.mapper.ChatMessageMapper;
 import com.flora.ai.ecommerce.model.AIResponse;
 import com.flora.ai.ecommerce.model.vo.customerService.*;
 import com.flora.ai.ecommerce.service.CustomerService;
@@ -16,6 +19,7 @@ import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.ai.openai.api.OpenAiApi;
 import org.springframework.ai.vectorstore.VectorStore;
+import org.springframework.transaction.support.TransactionTemplate;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
@@ -30,12 +34,16 @@ import java.util.List;
 @RestController
 @Slf4j
 @RequestMapping("/customer-service")
-public class AiCustomerServiceController {
+public class RagController {
 
     @Resource
     private CustomerService customerService;
     @Resource
     private VectorStore vectorStore;
+    @Resource
+    private ChatMessageMapper chatMessageMapper;
+    @Resource
+    private TransactionTemplate transactionTemplate;
 
     @Value("${customer-service.model}")
     private String model;
@@ -72,9 +80,9 @@ public class AiCustomerServiceController {
     @PostMapping(value = "/chat/completion", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     //    @GetMapping(value = "/chat/completion", produces = "text/html;charset=utf-8")
     @ApiOperationLog(description = "电商助手问答 [RAG]")
-    public Flux<AIResponse> chat(@RequestBody @Validated AiCustomerServiceChatReqVO aiCustomerServiceChatReqVO) {
+    public Flux<AIResponse> chat(@RequestBody @Validated RagServiceChatReqVO ragServiceChatReqVO) {
         // 用户提示词
-         String message = aiCustomerServiceChatReqVO.getMessage();
+         String message = ragServiceChatReqVO.getMessage();
 
         ChatModel chatModel = OpenAiChatModel.builder()
                 .openAiApi(OpenAiApi.builder()
@@ -93,7 +101,9 @@ public class AiCustomerServiceController {
                 .user(message);
 
         List<Advisor> advisors = new ArrayList<>();
-        advisors.add(new CustomerServiceAdvisor(vectorStore));
+        advisors.add(new RagServiceAdvisor(vectorStore));
+        advisors.add(new CustomStreamLoggerAndMessage2DBAdvisor(chatMessageMapper, ragServiceChatReqVO, transactionTemplate));
+        advisors.add(new CustomChatMemoryAdvisor(chatMessageMapper, ragServiceChatReqVO, 50));
 
         requestSpec.advisors(advisors);
 

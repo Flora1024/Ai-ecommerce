@@ -3,6 +3,7 @@ package com.flora.ai.ecommerce.advisor;
 import com.flora.ai.ecommerce.domain.dos.ChatMessageDO;
 import com.flora.ai.ecommerce.domain.mapper.ChatMessageMapper;
 import com.flora.ai.ecommerce.model.vo.chat.AiChatReqVO;
+import com.flora.ai.ecommerce.model.vo.ChatRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClientRequest;
 import org.springframework.ai.chat.client.ChatClientResponse;
@@ -19,14 +20,15 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CustomStreamLoggerAndMessage2DBAdvisor implements StreamAdvisor {
 
     private final ChatMessageMapper chatMessageMapper;
-    private final AiChatReqVO aiChatReqVO;
+    private final ChatRequest chatRequest;
+//    private final AiChatReqVO aiChatReqVO;
     private final TransactionTemplate transactionTemplate;
 
     public CustomStreamLoggerAndMessage2DBAdvisor(ChatMessageMapper chatMessageMapper,
-                                                  AiChatReqVO aiChatReqVO,
+                                                  ChatRequest chatRequest,
                                                   TransactionTemplate transactionTemplate) {
         this.chatMessageMapper = chatMessageMapper;
-        this.aiChatReqVO = aiChatReqVO;
+        this.chatRequest = chatRequest;
         this.transactionTemplate = transactionTemplate;
     }
 
@@ -44,9 +46,9 @@ public class CustomStreamLoggerAndMessage2DBAdvisor implements StreamAdvisor {
     public Flux<ChatClientResponse> adviseStream(ChatClientRequest chatClientRequest, StreamAdvisorChain streamAdvisorChain) {
 
         // 对话 UUID
-        String chatUuid = aiChatReqVO.getChatId();
+        String chatUuid = chatRequest.getChatId();
         // 用户消息
-        String userMessage = aiChatReqVO.getMessage();
+        String userMessage = chatRequest.getMessage();
 
         Flux<ChatClientResponse> chatClientResponseFlux = streamAdvisorChain.nextStream(chatClientRequest);
 

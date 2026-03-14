@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @Slf4j
-public class CustomerServiceAdvisor implements StreamAdvisor {
+public class RagServiceAdvisor implements StreamAdvisor {
 
     private final VectorStore vectorStore;
 
@@ -56,7 +56,7 @@ public class CustomerServiceAdvisor implements StreamAdvisor {
             请严格按照以上要求回答问题
             """);
 
-    public CustomerServiceAdvisor(VectorStore vectorStore) {
+    public RagServiceAdvisor(VectorStore vectorStore) {
         this.vectorStore = vectorStore;
     }
 

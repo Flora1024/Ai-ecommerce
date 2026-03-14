@@ -6,7 +6,6 @@ import com.flora.ai.ecommerce.enums.ResponseCodeEnum;
 import com.flora.ai.ecommerce.event.MdUploadedEvent;
 import com.flora.ai.ecommerce.event.XlsxUploadedEvent;
 import com.flora.ai.ecommerce.exception.BizException;
-import com.flora.ai.ecommerce.model.vo.xlsxQuery.DuckdbSqlReqVO;
 import com.flora.ai.ecommerce.prompt.DataAnalysisPrompt;
 import com.flora.ai.ecommerce.service.AnalysisService;
 import com.flora.ai.ecommerce.utils.Response;
@@ -39,8 +38,6 @@ import static com.fasterxml.jackson.databind.type.LogicalType.Collection;
 @Slf4j
 public class AnalysisServiceImpl implements AnalysisService {
 
-    @Resource
-    private Connection connection;
     @Resource
     private NamedParameterJdbcTemplate jdbcTemplate;
     @Resource
@@ -130,6 +127,9 @@ public class AnalysisServiceImpl implements AnalysisService {
      */
     @Override
     public Prompt buildPromptFirstStage(String userMessage) {
+        if (!isTableExists()) {
+            throw new BizException(ResponseCodeEnum.TABLE_NOT_FOUND);
+        }
         PromptTemplate promptTemplate = DataAnalysisPrompt.SQL_GENERATION_PROMPT_TEMPLATE;
         // 获取表名、表结构、用户问题
         return promptTemplate.create(
@@ -150,6 +150,9 @@ public class AnalysisServiceImpl implements AnalysisService {
      */
     @Override
     public Prompt buildPromptSecondStage(String userMessage, String sql, String resultMarkdown) {
+        if (!isTableExists()) {
+            throw new BizException(ResponseCodeEnum.TABLE_NOT_FOUND);
+        }
         PromptTemplate promptTemplate = DataAnalysisPrompt.ANSWER_GENERATION_PROMPT_TEMPLATE;
         // 获取用户问题、SQL、结果Markdown
         return promptTemplate.create(
